@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav
+      id="navbar"
+      class="navbar navbar-expand-xl fixed-top pt-3 pb-3 ps-md-5 pe-md-5 ps-xl-3 pe-xl-3 ps-xxl-5 pe-xxl-5"
+    >
+      <div id="nav-wrapper" class="container-fluid flex-row-reverse">
+        <div class="d-flex gap-3 nav-contact">
+          <span>
+            <a class="nav-contact-link" href="tel:+919419658432">
+              <i class="fa-solid fa-phone fa-xl"></i>
+            </a>
+          </span>
+          <span>
+            <a class="nav-contact-link" href="mailto:dartabish01@gmail.com">
+              <i class="fa-solid fa-envelope fa-xl"></i>
+            </a>
+          </span>
+        </div>
+
+        <a
+          id="navbar-brand"
+          class="navbar-brand text-center pt-0 ps-4 ps-xl-0 order-xl-1"
+          href="#"
+        >
+          <span class="mt-1 mb-0">Espree Holidays</span>
+          <!-- <span class="d-block"><span>Holidays & Adventures</span></span> -->
+        </a>
+
+        <button
+          id="navbar-toggler"
+          class="navbar-toggler position-sticky"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvas-navbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span>
+            <i class="fa-solid fa-bars"></i>
+          </span>
+        </button>
+
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvas-navbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <!--  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"></h5> -->
+            <button
+              id="offcanvas-close-btn"
+              type="button"
+              class="btn-close btn-close-dark pt-4 pe-4"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav gap-xl-5 ps-3">
+              <li class="nav-item">
+                <a class="" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item active">
+                <a class="" href="./about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="" href="#">Tour Packages</a>
+              </li>
+              <li class="nav-item">
+                <a class="" href="#">Rentals</a>
+              </li>
+              <li class="nav-item">
+                <a class="" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <script src="./bootstrap/js/bootstrap.bundle.js"></script>
+  </body>
+</html>
