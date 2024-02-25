@@ -490,7 +490,9 @@ tourPackages.forEach(tourPackage => {
                     <img src="../../assets/clock.svg" width="25"
                 height="25">
                 </div>
-                <h5>4 Days / 3 Nights</h5>
+                <h5>${tourPackage.details.duration.days} Days / ${
+      tourPackage.details.duration.nights
+    } Nights</h5>
               </div>
             </li>
             <li>
@@ -616,16 +618,20 @@ bookBtns.forEach(btn => {
         break;
     }
 
-    let url = `https://wa.me/919419658432?text=Hi, I want to book the ${selectedPackage}`;
-    window.open(url, '_blank').focus();
+    var email = 'info@espreeholidays.com';
+    var subject = 'Tour Package Enquiry';
+    var emailBody = `Hi, I'm interested in booking the ${selectedPackage}!`;
+    window.location.href = `mailto:${email}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(emailBody)}`;
   });
 });
 
 const backToTopBtn = document.getElementById('myBtn');
 function scrollFunction() {
   if (
-    document.body.scrollTop > 1000 ||
-    document.documentElement.scrollTop > 1000
+    document.body.scrollTop > 500 ||
+    document.documentElement.scrollTop > 500
   ) {
     backToTopBtn.style.opacity = '1';
   } else {
@@ -633,13 +639,11 @@ function scrollFunction() {
   }
 }
 
-/* Back To Top button functionality */ backToTopBtn.addEventListener(
-  'click',
-  () => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
-);
+/* Back To Top button functionality */
+backToTopBtn.addEventListener('click', () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+});
 
 window.onscroll = function () {
   scrollFunction();

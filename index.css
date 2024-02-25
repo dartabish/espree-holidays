@@ -506,6 +506,12 @@ footer {
 }
 
 @media screen and (min-width: 576px) {
+  #navbar-brand img {
+    width: 50px;
+    height: 50px;
+    align-self: start;
+  }
+
   #navbar-brand div {
     font-size: 35px;
   }
