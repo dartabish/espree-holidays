@@ -190,94 +190,140 @@ const tourPackages = [
       },
     },
   },
-  /*  {
+  {
     id: 5,
-    title: '8-Day Kashmir Package',
+    title: '4-Day Ladakh Package',
     img: '../../assets/packages/package-5.jpg',
     details: {
       duration: {
-        days: 8,
-        nights: 7,
+        days: 4,
+        nights: 3,
       },
       tourPlan: {
         day1: {
           id: 1,
-          title: 'Day 1',
-          description:
-            'Airport Pick-up | Srinagar Sightseeing | Stay in Srinagar',
+          title: 'Day 1: Arrival and Acclimatization in Leh',
+          description: `
+            <em>Morning/Afternoon</em> : Arrive in Leh. Dedicate this day to rest, allowing your body to acclimatize to the high altitude and prevent altitude sickness.
+            <br>
+            <em>Evening</em> : If you're feeling up to it, take a gentle stroll through Leh Market. Visit Leh Palace to delve into Ladakh's royal past and Shanti Stupa for stunning panoramic views of the town and surrounding mountains.
+          `,
         },
         day2: {
           id: 2,
-          title: 'Day 2',
-          description: 'Srinagar-Sonamarg-Srinagar',
+          title: 'Day 2: Leh Local Sightseeing',
+          description: `
+            <em>Shey Palace</em> : Explore the former summer palace of the Ladakhi kings.
+            <br>
+            <em>Thiksey Monastery</em> : Visit this impressive monastery, known for its resemblance to the Potala Palace in Lhasa.
+            <br>
+            <em>Hemis Monastery</em> : The largest and richest monastery in Ladakh.
+            <br>
+            <em>Return to Leh</em> : Spend another night in Leh, perhaps exploring more local cuisine.
+          `,
         },
         day3: {
           id: 3,
-          title: 'Day 3',
-          description: 'Srinagar-Pahalgam',
+          title: 'Day 3: Leh to Nubra Valley via Khardung La',
+          description: `
+          <em>Khardung La Pass</em> : Early morning drive to Nubra Valley via one of the world's highest motorable roads.
+          <br>
+          <em>Diskit Monastery</em> : Visit the monastery and the towering Maitreya Buddha statue.
+          <br>
+          <em>Hunder Sand Dunes</em> : Enjoy a camel safari on the unique Bactrian camels.
+          <br>
+          <em>Overnight in Nubra Valley</em> : Choose a guesthouse or a campsite for your stay.
+          `,
         },
         day4: {
           id: 4,
-          title: 'Day 4',
-          description: 'In Pahalgam',
-        },
-        day5: {
-          id: 5,
-          title: 'Day 5',
-          description: 'Pahalgam-Gulmarg',
-        },
-        day6: {
-          id: 6,
-          title: 'Day 6',
-          description: 'In Gulmarg',
-        },
-        day7: {
-          id: 7,
-          title: 'Day 7',
-          description: 'Gulmarg-Srinagar',
-        },
-        day8: {
-          id: 8,
-          title: 'Day 8',
-          description: 'On-time transfer to Srinagar Airport',
+          title: 'Day 4: Nubra Valley to Pangong Lake and Return to Leh',
+          description: `<em>Early Morning</em> : Depart for Pangong Lake via Shyok Village or Wari La, enjoying the rugged landscape.
+          <br>
+          <em>Pangong Lake</em> : Spend time at the lake, known for its remarkable color changes.
+          <br>
+          <em>Return To Leh</em> : Begin your journey back to Leh, filled with reflections of the pristine Pangong Lake and the adventures of the past few days.
+          <br>
+          <em>Evening</em> : Arrive in Leh. Enjoy a relaxed dinner, perhaps some last-minute shopping in the markets, and prepare for your journey back home the next day.`,
         },
       },
     },
   },
   {
     id: 6,
-    title: '5-Day Leh-Ladakh Package',
+    title: `6-Day Leh-Ladakh Package`,
     img: '../../assets/packages/package-6.jpg',
     details: {
       duration: {
-        days: 5,
-        nights: 4,
+        days: 6,
+        nights: 5,
       },
       tourPlan: {
         day1: {
           id: 1,
-          title: 'Day 1',
-          description: 'Departure from Srinagar to Kargil',
+          title: 'Day 1: Arrival and Acclimatization in Leh',
+          description: `
+            <em>Morning/Afternoon</em> : Arrive in Leh. Spend the day resting to acclimatize to the high altitude.
+            <br>
+            <em>Evening</em> : If feeling well, take a gentle walk around Leh Market; visit Leh Palace and Shanti Stupa for panoramic views of the town.
+          `,
         },
         day2: {
           id: 2,
-          title: 'Day 2',
-          description: 'Kargil to Leh',
+          title: 'Day 2: Leh Local Sightseeing',
+          description: `
+            <em>Shey Palace</em> : Explore the former summer palace of the Ladakhi kings.
+            <br>
+            <em>Thiksey Monastery</em> : Visit this impressive monastery, known for its resemblance to the Potala Palace in Lhasa.
+            <br>
+            <em>Hemis Monastery</em> : The largest and richest monastery in Ladakh.
+            <br>
+            <em>Return to Leh</em> : Spend another night in Leh, perhaps exploring more local cuisine.
+          `,
         },
         day3: {
           id: 3,
-          title: 'Day 3',
-          description: 'Leh Sightseeing',
+          title: 'Day 3: Leh to Nubra Valley via Khardung La',
+          description: `
+          <em>Khardung La Pass</em> : Early morning drive to Nubra Valley via one of the world's highest motorable roads.
+          <br>
+          <em>Diskit Monastery</em> : Visit the monastery and the towering Maitreya Buddha statue.
+          <br>
+          <em>Hunder Sand Dunes</em> : Enjoy a camel safari on the unique Bactrian camels.
+          <br>
+          <em>Overnight in Nubra Valley</em> : Choose a guesthouse or a campsite for your stay.
+          `,
         },
         day4: {
           id: 4,
-          title: 'Day 4',
-          description: 'Day trip to Pangong Lake',
+          title: 'Day 4: Nubra Valley to Pangong Lake',
+          description: `
+          <em>Early Morning</em> : Depart for Pangong Lake via Shyok Village or Wari La, enjoying the rugged landscape.
+          <br>
+          <em>Pangong Lake</em> : Spend time at the lake, known for its remarkable color changes.
+          <br>
+          <em>Overnight near Pangong</em> : Stay in a camp or guesthouse to experience the serene night sky.
+          `,
         },
         day5: {
           id: 5,
-          title: 'Day 5',
-          description: 'Return from Leh to Srinagar',
+          title: 'Day 5: Pangong Lake to Leh via Chang La',
+          description: `<em>Chang La Pass</em>: Return to Leh via the third highest motorable road in the world.
+          <br>
+          <em>Sindhu Ghat</em>: Stop at the peaceful riverbank, ideal for relaxation and photography.
+          <br>
+          <em>Return to Leh</em>: Explore local markets for souvenirs and enjoy a relaxed evening.`,
+        },
+        day6: {
+          id: 6,
+          title: 'Day 6: Monasteries and Palaces Tour',
+          description: `<em>Likir Monastery</em> : Start your day with a visit to Likir, known for its gigantic statue of Maitreya Buddha.
+          <br>
+          <em>Alchi Monastery</em> : Explore Alchi, one of Ladakh's oldest surviving monasteries, famous for its Kashmiri influenced Buddhist art.
+          <br>
+          <em>Basgo Palace</em> : Visit the ruins of Basgo Palace, known for its historical significance and architecture.
+          <br>
+          <em>Return to Leh</em> : Spend your final evening in Leh, wrapping up your trip.`,
         },
       },
     },
@@ -291,133 +337,181 @@ const tourPackages = [
         days: 7,
         nights: 6,
       },
+
       tourPlan: {
         day1: {
           id: 1,
-          title: 'Day 1',
-          description: 'Departure from Srinagar',
+          title: 'Day 1: Arrival and Acclimatization in Leh',
+          description:
+            '<em>Morning/Afternoon</em>: Arrive in Leh. Spend the day resting to acclimatize to the high altitude.<br><em>Evening</em>: If feeling well, take a gentle walk around Leh Market; visit Leh Palace and Shanti Stupa for panoramic views of the town.',
         },
         day2: {
           id: 2,
-          title: 'Day 2',
-          description: 'Drass/Kargil to Leh',
+          title: 'Day 2: Leh Local Sightseeing',
+          description:
+            '<em>Shey Palace</em>: Explore the former summer palace of the Ladakhi kings.<br><em>Thiksey Monastery</em>: Visit this impressive monastery, known for its resemblance to the Potala Palace in Lhasa.<br><em>Hemis Monastery</em>: The largest and richest monastery in Ladakh.<br><em>Return to Leh</em>: Spend another night in Leh, perhaps exploring more local cuisine.',
         },
         day3: {
           id: 3,
-          title: 'Day 3',
-          description: 'Leh Local Sightseeing',
+          title: 'Day 3: Leh to Nubra Valley via Khardung La',
+          description:
+            "<em>Khardung La Pass</em>: Early morning drive to Nubra Valley via one of the world's highest motorable roads.<br><em>Diskit Monastery</em>: Visit the monastery and the towering Maitreya Buddha statue.<br><em>Hunder Sand Dunes</em>: Enjoy a camel safari on the unique Bactrian camels.<br><em>Overnight in Nubra Valley</em>: Choose a guesthouse or a campsite for your stay.",
         },
         day4: {
           id: 4,
-          title: 'Day 4',
-          description: 'Leh to Nubra Valley via Khardung La',
+          title: 'Day 4: Nubra Valley to Pangong Lake',
+          description:
+            '<em>Early Morning</em>: Depart for Pangong Lake via Shyok Village or Wari La, enjoying the rugged landscape.<br><em>Pangong Lake</em>: Spend time at the lake, known for its remarkable color changes.<br><em>Overnight near Pangong</em>: Stay in a camp or guesthouse to experience the serene night sky.',
         },
         day5: {
           id: 5,
-          title: 'Day 5',
-          description: ' Nubra Valley to Pangong Tso',
+          title: 'Day 5: Pangong Lake to Leh via Chang La',
+          description:
+            '<em>Chang La Pass</em>: Return to Leh via the third highest motorable road in the world.<br><em>Sindhu Ghat</em>: Stop at the peaceful riverbank, ideal for relaxation and photography.<br><em>Return to Leh</em>: Explore local markets for souvenirs and enjoy a relaxed evening.',
         },
         day6: {
           id: 6,
-          title: 'Day 6',
-          description: 'Pangong Tso to Leh',
+          title: 'Day 6: Leh to Tso Moriri',
+          description:
+            '<em>Early Morning</em>: Depart for Tso Moriri, experiencing the serene and untouched beauty of this high-altitude lake.<br><em>Korzok Village</em>: Visit this quaint village near Tso Moriri, home to a beautiful monastery and nomadic tribes.<br><em>Tso Moriri Lake</em>: Spend the day at the lake, enjoying its tranquil beauty and the surrounding landscape.<br><em>Overnight near Tso Moriri</em>: Stay in a camp or guesthouse, under the stars by the lake.',
         },
         day7: {
           id: 7,
-          title: 'Day 7',
-          description: ' Return to Srinagar',
+          title: 'Day 7: Tso Moriri to Leh',
+          description:
+            '<em>Early Morning</em>: Begin your journey back to Leh. Enjoy the scenic drive, reflecting on the serene experiences of the past days.<br><em>Leisure Afternoon in Leh</em>: Spend your afternoon leisurely in Leh, maybe doing some last-minute shopping or simply relaxing at a café.<br><em>Evening</em>: Enjoy your last evening in Leh, perhaps with a farewell dinner at one of the local restaurants, celebrating the conclusion of your memorable journey through Ladakh.',
         },
       },
     },
   },
   {
     id: 8,
-    title: 'Gurez Valley Exploration Package',
-    img: '../../assets/packages/package-10.png',
+    title: `8-Day Leh-Ladakh Package`,
+    img: '../../assets/packages/package-8.jpg',
     details: {
       duration: {
-        days: 6,
-        nights: 5,
+        days: 8,
+        nights: 7,
       },
       tourPlan: {
         day1: {
           id: 1,
-          title: 'Day 1',
+          title: 'Day 1: Arrival and Acclimatization in Leh',
           description:
-            ' Airport Pick-up | Srinagar Sightseeing | Stay in Srinagar',
+            '<em>Morning/Afternoon</em>: Arrive in Leh. Spend the day resting to acclimatize to the high altitude.<br><em>Evening</em>: If feeling well, take a gentle walk around Leh Market; visit Leh Palace and Shanti Stupa for panoramic views of the town.',
         },
         day2: {
           id: 2,
-          title: 'Day 2',
-          description: 'Srinagar to Gurez | Stay in Gurez',
+          title: 'Day 2: Leh Local Sightseeing',
+          description:
+            '<em>Shey Palace</em>: Explore the former summer palace of the Ladakhi kings.<br><em>Thiksey Monastery</em>: Visit this impressive monastery, known for its resemblance to the Potala Palace in Lhasa.<br><em>Hemis Monastery</em>: The largest and richest monastery in Ladakh.<br><em>Return to Leh</em>: Spend another night in Leh, perhaps exploring more local cuisine.',
         },
         day3: {
           id: 3,
-          title: 'Day 3',
-          description: 'Gurez local sightseeing',
+          title: 'Day 3: Leh to Nubra Valley via Khardung La',
+          description:
+            "<em>Khardung La Pass</em>: Early morning drive to Nubra Valley via one of the world's highest motorable roads.<br><em>Diskit Monastery</em>: Visit the monastery and the towering Maitreya Buddha statue.<br><em>Hunder Sand Dunes</em>: Enjoy a camel safari on the unique Bactrian camels.<br><em>Overnight in Nubra Valley</em>: Choose a guesthouse or a campsite for your stay.",
         },
         day4: {
           id: 4,
-          title: 'Day 4',
-          description: 'Gurez to Tulail | Return to Gurez',
+          title: 'Day 4: Nubra Valley to Pangong Lake',
+          description:
+            '<em>Early Morning</em>: Depart for Pangong Lake via Shyok Village or Wari La, enjoying the rugged landscape.<br><em>Pangong Lake</em>: Spend time at the lake, known for its remarkable color changes.<br><em>Overnight near Pangong</em>: Stay in a camp or guesthouse to experience the serene night sky.',
         },
         day5: {
           id: 5,
-          title: 'Day 5',
-          description: 'Gurez to Srinagar | Stay in Srinagar',
+          title: 'Day 5: Pangong Lake to Leh via Chang La',
+          description:
+            '<em>Chang La Pass</em>: Return to Leh via the third highest motorable road in the world.<br><em>Sindhu Ghat</em>: Stop at the peaceful riverbank, ideal for relaxation and photography.<br><em>Return to Leh</em>: Explore local markets for souvenirs and enjoy a relaxed evening.',
         },
         day6: {
           id: 6,
-          title: 'Day 6',
-          description: 'On-time transfer to Srinagar Airport',
+          title: 'Day 6: Leh to Tso Moriri',
+          description:
+            '<em>Early Morning</em>: Depart for Tso Moriri, experiencing the serene and untouched beauty of this high-altitude lake.<br><em>Korzok Village</em>: Visit this quaint village near Tso Moriri, home to a beautiful monastery and nomadic tribes.<br><em>Tso Moriri Lake</em>: Spend the day at the lake, enjoying its tranquil beauty and the surrounding landscape.<br><em>Overnight near Tso Moriri</em>: Stay in a camp or guesthouse, under the stars by the lake.',
+        },
+        day7: {
+          id: 7,
+          title: 'Day 7: Tso Moriri to Leh via Tsokar Lake',
+          description:
+            '<em>Early Morning</em>: Begin your journey back to Leh via Tsokar Lake, known for its salt deposits and wildlife, including the chance to see Tibetan wild asses.<br><em>Tsokar Lake</em>: Explore the area, enjoy the unique landscape and the variety of birds.<br><em>Return to Leh</em>: Complete your return journey to Leh, with the rest of the day at leisure for relaxation or exploration.',
+        },
+        day8: {
+          id: 8,
+          title: 'Day 8: Leisure Day in Leh',
+          description:
+            '<em>Leisure Day</em>: This day is reserved for leisure, allowing you to explore Leh at your own pace. Consider visiting local handicraft shops for souvenirs, savoring Ladakhi cuisine at local eateries, or simply relaxing at your hotel.<br><em>Optional Sightseeing</em>: Depending on your interests, you might opt for a short trek nearby, a visit to a local Ladakhi home, or even a day trip to nearby attractions if time permits.<br><em>Evening</em>: Enjoy your final evening in Leh, reflecting on the adventure and beauty of Ladakh.',
         },
       },
     },
   },
   {
     id: 9,
-    title: 'Customized Package',
-    img: '../../assets/packages/custom-package.jpeg',
+    title: `9-Day Leh-Ladakh Package`,
+    img: '../../assets/packages/package-9.jpg',
     details: {
       duration: {
-        days: 6,
-        nights: 5,
+        days: 9,
+        nights: 8,
       },
       tourPlan: {
         day1: {
           id: 1,
-          title: 'Day 1',
+          title: 'Day 1: Arrival and Acclimatization in Leh',
           description:
-            ' Airport Pick-up | Srinagar Sightseeing | Stay in Srinagar',
+            '<em>Morning/Afternoon</em>: Arrive in Leh. Spend the day resting to acclimatize to the high altitude.<br><em>Evening</em>: If feeling well, take a gentle walk around Leh Market; visit Leh Palace and Shanti Stupa for panoramic views of the town.',
         },
         day2: {
           id: 2,
-          title: 'Day 2',
-          description: 'Srinagar  to Gurez | Stay in Gurez',
+          title: 'Day 2: Leh Local Sightseeing',
+          description:
+            '<em>Shey Palace</em>: Explore the former summer palace of the Ladakhi kings.<br><em>Thiksey Monastery</em>: Visit this impressive monastery, known for its resemblance to the Potala Palace in Lhasa.<br><em>Hemis Monastery</em>: The largest and richest monastery in Ladakh.<br><em>Return to Leh</em>: Spend another night in Leh, perhaps exploring more local cuisine.',
         },
         day3: {
           id: 3,
-          title: 'Day 3',
-          description: 'Gurez local Sightseeing',
+          title: 'Day 3: Leh to Nubra Valley via Khardung La',
+          description:
+            "<em>Khardung La Pass</em>: Early morning drive to Nubra Valley via one of the world's highest motorable roads.<br><em>Diskit Monastery</em>: Visit the monastery and the towering Maitreya Buddha statue.<br><em>Hunder Sand Dunes</em>: Enjoy a camel safari on the unique Bactrian camels.<br><em>Overnight in Nubra Valley</em>: Choose a guesthouse or a campsite for your stay.",
         },
         day4: {
           id: 4,
-          title: 'Day 4',
-          description: 'Gurez to Tulail | Return to Gurez',
+          title: 'Day 4: Nubra Valley to Pangong Lake',
+          description:
+            '<em>Early Morning</em>: Depart for Pangong Lake via Shyok Village or Wari La, enjoying the rugged landscape.<br><em>Pangong Lake</em>: Spend time at the lake, known for its remarkable color changes.<br><em>Overnight near Pangong</em>: Stay in a camp or guesthouse to experience the serene night sky.',
         },
         day5: {
           id: 5,
-          title: 'Day 5',
-          description: 'Gurez to Srinagar | Stay in Srinagar',
+          title: 'Day 5: Pangong Lake to Leh via Chang La',
+          description:
+            '<em>Chang La Pass</em>: Return to Leh via the third highest motorable road in the world.<br><em>Sindhu Ghat</em>: Stop at the peaceful riverbank, ideal for relaxation and photography.<br><em>Return to Leh</em>: Explore local markets for souvenirs and enjoy a relaxed evening.',
         },
         day6: {
           id: 6,
-          title: 'Day 6',
-          description: 'On-time transfer to Srinagar Airport',
+          title: 'Day 6: Leh to Tso Moriri',
+          description:
+            '<em>Early Morning</em>: Depart for Tso Moriri, experiencing the serene and untouched beauty of this high-altitude lake.<br><em>Korzok Village</em>: Visit this quaint village near Tso Moriri, home to a beautiful monastery and nomadic tribes.<br><em>Tso Moriri Lake</em>: Spend the day at the lake, enjoying its tranquil beauty and the surrounding landscape.<br><em>Overnight near Tso Moriri</em>: Stay in a camp or guesthouse, under the stars by the lake.',
+        },
+        day7: {
+          id: 7,
+          title: 'Day 7: Tso Moriri to Leh via Tsokar Lake',
+          description:
+            '<em>Early Morning</em>: Begin your journey back to Leh via Tsokar Lake, known for its salt deposits and wildlife, including the chance to see Tibetan wild asses.<br><em>Tsokar Lake</em>: Explore the area, enjoy the unique landscape and the variety of birds.<br><em>Return to Leh</em>: Complete your return journey to Leh, with the rest of the day at leisure for relaxation or exploration.',
+        },
+        day8: {
+          id: 8,
+          title: 'Day 8: Leisure Day in Leh',
+          description:
+            '<em>Leisure Day</em>: This day is reserved for leisure, allowing you to explore Leh at your own pace. Consider visiting local handicraft shops for souvenirs, savoring Ladakhi cuisine at local eateries, or simply relaxing at your hotel.<br><em>Optional Sightseeing</em>: Depending on your interests, you might opt for a short trek nearby, a visit to a local Ladakhi home, or even a day trip to nearby attractions if time permits.<br><em>Evening</em>: Enjoy your final evening in Leh, reflecting on the adventure and beauty of Ladakh.',
+        },
+        day9: {
+          id: 9,
+          title: 'Day 9: Departure from Leh',
+          description:
+            '<em>Morning</em>: Depending on your flight or travel arrangements, take some time to soak in the last views of the Ladakh landscape.<br><em>Departure</em>: Proceed to the airport for your departure, carrying back memories and experiences of a lifetime from the magnificent land of Ladakh.',
         },
       },
     },
-  }, */
+  },
 ];
 
 const packageCardsContainer = document.querySelector('.package-card-container');
@@ -427,47 +521,7 @@ tourPackages.forEach(tourPackage => {
   packageCard.id = tourPackage.id;
 
   let innerHTMLContent;
-  if (tourPackage.id === 9) {
-    packageCard.className = 'package-card custom-package-card align-self-start';
-    innerHTMLContent = `
-        <div class="package-card-banner">
-          <img src="${tourPackage.img}" alt="${tourPackage.title}" />
-        </div>
-        <div class="custom-package-details p-3">
-            <h4 class="">${tourPackage.title}</h4>
-        </div>
-        <ul
-            class="package-card-amenities d-flex justify-content-around pt-2 pb-2"
-          >
-            <li>
-              <div class="package-card-amenities-icon" title="Meals">
-                <i class="fa-solid fa-cutlery" aria-label="Meals"></i>
-              </div>
-            </li>
-            <li>
-              <div
-                class="package-card-amenities-icon"
-                title="3 & 4 Star Hotels"
-              >
-                <i class="fa-solid fa-hotel" aria-label="3 & 4 Star Hotels"></i>
-              </div>
-            </li>
-            <li>
-              <div class="package-card-amenities-icon" title="Transportation">
-                <i class="fa-solid fa-cab"  aria-label="Cabs/Transportation"></i>
-              </div>
-            </li>
-          </ul>
-          <div
-            class="package-card-booking ps-3 pe-3 pt-3 d-flex justify-content-center"
-          >
-            <button class="book-package w-100" id="book-button-${tourPackage.id}">
-              Book Now
-            </button>
-          </div>
-    `;
-  } else {
-    innerHTMLContent = `
+  innerHTMLContent = `
         <div class="package-card-banner">
           <img src="${tourPackage.img}" alt="${tourPackage.title}" />
         </div>
@@ -491,8 +545,8 @@ tourPackages.forEach(tourPackage => {
                 height="25">
                 </div>
                 <h5>${tourPackage.details.duration.days} Days / ${
-      tourPackage.details.duration.nights
-    } Nights</h5>
+    tourPackage.details.duration.nights
+  } Nights</h5>
               </div>
             </li>
             <li>
@@ -570,21 +624,106 @@ tourPackages.forEach(tourPackage => {
           <div
             class="package-card-booking ps-3 pe-3 pb-2 d-flex justify-content-center"
           >
-            <button class="book-package w-100" id="book-button-${
+            <button class="package-enquiry-btn w-100" data-bs-toggle="modal" data-bs-target="#exampleModal${
               tourPackage.id
-            }">
-              Send Enquiry
+            }">Send Enquiry
             </button>
           </div>
         </div>
-   
+
+         <!-- Modal -->
+        <div class="modal fade" id="exampleModal${
+          tourPackage.id
+        }" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content p-4">
+                    <div class="d-flex justify-content-between">
+                        <h4 class="fw-semi-bold">Enquiry Details</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <hr>
+                    <div class="booking-details"></div>
+                    <form id="bookingForm${
+                      tourPackage.id
+                    }" class="booking-form" data-car-id="${
+    tourPackage.id
+  }"  method="POST">
+                        <div class="form-floating mb-2">
+                            <input
+                            disabled
+                                value="${tourPackage.title}"
+                                type="text"
+                                name="Selected Package"
+                                class="form-control"
+                                id="floatingPackage${tourPackage.id}"
+                                placeholder="Selected Package"
+                                required
+                            />
+                            <label for="floatingCar${
+                              tourPackage.id
+                            }">Selected Package</label>
+                        </div>
+                              <div class="form-floating mb-2 ">
+                                <input
+                                    type="date"
+                                    name="Start Date"
+                                    class="form-control"
+                                    id="floatingStartDate${tourPackage.id}"
+                                    placeholder="Date of Arrival" 
+                                    />
+                               <label for="floatingStartDate${
+                                 tourPackage.id
+                               }">Date of Arrival</label>
+                              </div>
+                        <div class="form-floating mb-2">
+                            <input
+                                type="text"
+                                name="Full Name"
+                                class="form-control"
+                                id="floatingFullName${tourPackage.id}"
+                                placeholder="Full Name"
+                                required
+                            />
+                            <label for="floatingFullName${
+                              tourPackage.id
+                            }">Full Name</label>
+                        </div>
+                        <div class="form-floating mb-2">
+                            <input
+                                type="tel"
+                                name="Phone"
+                                class="form-control"
+                                id="floatingPhone${tourPackage.id}"
+                                placeholder="Phone"
+                            />
+                            <label for="floatingPhone${
+                              tourPackage.id
+                            }">Phone (Optional)</label>
+                        </div>
+                        <div class="form-floating mb-2">
+                              <textarea
+                                class="form-control"
+                                name="Message"
+                                id="floatingMessage${tourPackage.id}"
+                                placeholder="Message"
+                                style="height: 160px"
+                              ></textarea>
+                                    <label for="floatingMessage${
+                                      tourPackage.id
+                                    }">Additional Instructions</label>
+                        </div>
+                                <button type="submit" class="send-enquiry-final w-100">Send Enquiry
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
   `;
-  }
   packageCard.innerHTML = innerHTMLContent;
   packageCardsContainer.appendChild(packageCard);
 });
 
-const bookBtns = document.querySelectorAll('.book-package');
+/* const bookBtns = document.querySelectorAll('.send-enquiry-final');
 bookBtns.forEach(btn => {
   btn.addEventListener('click', e => {
     let selectedPackage;
@@ -615,6 +754,8 @@ bookBtns.forEach(btn => {
         break;
       case 'book-button-9':
         selectedPackage = tourPackages[8].title;
+      case 'book-button-10':
+        selectedPackage = tourPackages[9].title;
         break;
     }
 
@@ -625,7 +766,7 @@ bookBtns.forEach(btn => {
       subject
     )}&body=${encodeURIComponent(emailBody)}`;
   });
-});
+}); */
 
 const backToTopBtn = document.getElementById('myBtn');
 function scrollFunction() {

@@ -2,11 +2,7 @@
   color: var(--active-color);
 }
 
-/* header {
-  height: auto;
-}
- */
-.package-hero {
+/* .package-hero {
   background: linear-gradient(rgb(100 100 100 / 70%), rgba(17, 17, 17, 0.7)),
     url(../assets/packages/packages-banner.jpg) no-repeat;
   background-size: cover;
@@ -20,7 +16,7 @@
   gap: 1rem;
   color: white;
   text-align: center;
-}
+} */
 
 .package-card-container {
   display: flex;
@@ -28,7 +24,6 @@
   justify-content: center;
   align-items: start;
   gap: 3rem;
-  padding: 0 10px;
 }
 
 .package-card {
@@ -77,6 +72,11 @@
 
 .tour-plan .day-plan {
   font-weight: 300;
+}
+
+.day-plan em {
+  font-weight: 350;
+  text-decoration: underline;
 }
 
 .accordion-collapse .accordion-body {
@@ -151,7 +151,8 @@
   place-items: center;
 }
 
-.package-card-booking button {
+.package-enquiry-btn,
+.send-enquiry-final {
   border: 3px solid var(--active-color);
   border-radius: 5px;
   font-size: 20px;
@@ -162,7 +163,8 @@
   transition: background-color 0.3s ease-in-out;
 }
 
-.package-card-booking button:hover {
+.package-card-booking button:hover,
+.send-enquiry-final:hover {
   background-color: var(--hover-color);
   color: white;
 }
@@ -179,9 +181,12 @@
   box-shadow: none !important;
 }
 
+.send-enquiry-final .fa-envelope {
+  color: var(--active-color);
+}
+
 @media screen and (min-width: 768px) {
   .package-card-container {
-    padding: 0;
     gap: 1.5rem;
   }
 
@@ -205,7 +210,7 @@
   }
 
   .accordion-body {
-    max-height: 210px;
+    max-height: 300px;
     overflow-y: auto;
   }
 
@@ -217,7 +222,6 @@
 
 @media screen and (min-width: 1200px) {
   .package-card-container {
-    padding: 0;
     gap: 2.5rem;
   }
 
