@@ -23,6 +23,8 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: start;
+  padding-left: 10px;
+  padding-right: 10px;
   gap: 3rem;
 }
 
@@ -68,6 +70,8 @@
 
 .tour-plan .day {
   font-weight: 400;
+  letter-spacing: 1px;
+  text-decoration: underline;
 }
 
 .tour-plan .day-plan {
@@ -76,7 +80,7 @@
 
 .day-plan em {
   font-weight: 350;
-  text-decoration: underline;
+  font-style: normal;
 }
 
 .accordion-collapse .accordion-body {
@@ -152,7 +156,8 @@
 }
 
 .package-enquiry-btn,
-.send-enquiry-final {
+.send-enquiry-final,
+.enquiry-btn {
   border: 3px solid var(--active-color);
   border-radius: 5px;
   font-size: 20px;

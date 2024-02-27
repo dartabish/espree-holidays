@@ -10,6 +10,7 @@
   --active-color: #f4a434;
   --hover-color: #f4ab53;
   --accent-color: #fff0df;
+  --accent-color-light: #f6efe7ab;
   --primary-dark: #2b2a29;
 }
 
@@ -34,6 +35,22 @@
 
 .section-content-padding {
   padding-bottom: 1.875rem;
+}
+
+.enquiry-btn {
+  border: 3px solid var(--active-color);
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: white;
+  outline: none;
+  padding: 0.7rem;
+  color: var(--active-color);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.enquiry-btn:hover {
+  background-color: var(--hover-color);
+  color: white;
 }
 
 body {
@@ -138,7 +155,7 @@ header {
 }
 
 #offcanvas-navbar {
-  width: 75vw;
+  width: 90vw;
   flex-grow: 0;
 }
 

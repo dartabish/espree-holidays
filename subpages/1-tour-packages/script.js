@@ -1,7 +1,7 @@
 const tourPackages = [
   {
     id: 1,
-    title: '4-Day Kashmir Package',
+    title: '4 Day Kashmir Package',
     img: '../../../assets/packages/package-1.jpg',
     details: {
       duration: {
@@ -40,7 +40,7 @@ const tourPackages = [
   },
   {
     id: 2,
-    title: '5-Day Kashmir Package',
+    title: '5 Day Kashmir Package',
     img: '../../assets/packages/package-2.jpg',
     details: {
       duration: {
@@ -85,7 +85,7 @@ const tourPackages = [
   },
   {
     id: 3,
-    title: '6-Day Kashmir Package',
+    title: '6 Day Kashmir Package',
     img: '../../assets/packages/package-3.jpg',
     details: {
       duration: {
@@ -135,7 +135,7 @@ const tourPackages = [
   },
   {
     id: 4,
-    title: '7-Day Kashmir Package',
+    title: '7 Day Kashmir Package',
     img: '../../assets/packages/package-4.jpg',
     details: {
       duration: {
@@ -251,7 +251,7 @@ const tourPackages = [
   },
   {
     id: 6,
-    title: `6-Day Leh-Ladakh Package`,
+    title: `6 Day Ladakh Package`,
     img: '../../assets/packages/package-6.jpg',
     details: {
       duration: {
@@ -330,7 +330,7 @@ const tourPackages = [
   },
   {
     id: 7,
-    title: `7-Day Leh-Ladakh Package`,
+    title: `7 Day Ladakh Package`,
     img: '../../assets/packages/package-7.jpg',
     details: {
       duration: {
@@ -386,7 +386,7 @@ const tourPackages = [
   },
   {
     id: 8,
-    title: `8-Day Leh-Ladakh Package`,
+    title: `8 Day Ladakh Package`,
     img: '../../assets/packages/package-8.jpg',
     details: {
       duration: {
@@ -447,7 +447,7 @@ const tourPackages = [
   },
   {
     id: 9,
-    title: `9-Day Leh-Ladakh Package`,
+    title: `9 Day Ladakh Package`,
     img: '../../assets/packages/package-9.jpg',
     details: {
       duration: {
@@ -632,49 +632,38 @@ tourPackages.forEach(tourPackage => {
         </div>
 
          <!-- Modal -->
-        <div class="modal fade" id="exampleModal${
+        <div class="modal fade " id="exampleModal${
           tourPackage.id
         }" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content p-4">
                     <div class="d-flex justify-content-between">
                         <h4 class="fw-semi-bold">Enquiry Details</h4>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <hr>
+                    
                     <div class="booking-details"></div>
                     <form id="bookingForm${
                       tourPackage.id
-                    }" class="booking-form" data-car-id="${
+                    }" class="enquiry-form" data-package-id="${
     tourPackage.id
-  }"  method="POST">
-                        <div class="form-floating mb-2">
+  }"  autocomplete="on">
+                        <div class="form-floating" >
                             <input
-                            disabled
+                            readonly
                                 value="${tourPackage.title}"
                                 type="text"
                                 name="Selected Package"
-                                class="form-control"
+                                class="form-control-plaintext"
                                 id="floatingPackage${tourPackage.id}"
                                 placeholder="Selected Package"
                                 required
                             />
-                            <label for="floatingCar${
+                            <label for="floatingPackage${
                               tourPackage.id
-                            }">Selected Package</label>
+                            }">Selected Package*</label>
                         </div>
-                              <div class="form-floating mb-2 ">
-                                <input
-                                    type="date"
-                                    name="Start Date"
-                                    class="form-control"
-                                    id="floatingStartDate${tourPackage.id}"
-                                    placeholder="Date of Arrival" 
-                                    />
-                               <label for="floatingStartDate${
-                                 tourPackage.id
-                               }">Date of Arrival</label>
-                              </div>
+                        
                         <div class="form-floating mb-2">
                             <input
                                 type="text"
@@ -686,8 +675,22 @@ tourPackages.forEach(tourPackage => {
                             />
                             <label for="floatingFullName${
                               tourPackage.id
-                            }">Full Name</label>
+                            }">Full Name*</label>
                         </div>
+
+                        <div class="form-floating mb-2 ">
+                              <input
+                                type="date"
+                                name="Start Date"
+                                class="form-control"
+                                id="floatingStartDate${tourPackage.id}"
+                                placeholder="Date of Arrival" 
+                                />
+                              <label for="floatingStartDate${
+                                tourPackage.id
+                              }">Date of Arrival</label>
+                          </div>
+
                         <div class="form-floating mb-2">
                             <input
                                 type="tel"
@@ -712,7 +715,7 @@ tourPackages.forEach(tourPackage => {
                                       tourPackage.id
                                     }">Additional Instructions</label>
                         </div>
-                                <button type="submit" class="send-enquiry-final w-100">Send Enquiry
+                                <button type="submit" class="send-enquiry-final w-100 mt-4">Submit Now
                                 </button>
                             </form>
                         </div>
@@ -723,50 +726,35 @@ tourPackages.forEach(tourPackage => {
   packageCardsContainer.appendChild(packageCard);
 });
 
-/* const bookBtns = document.querySelectorAll('.send-enquiry-final');
-bookBtns.forEach(btn => {
-  btn.addEventListener('click', e => {
-    let selectedPackage;
-    switch (e.target.id) {
-      case 'book-button-1':
-        selectedPackage = tourPackages[0].title;
-        break;
-      case 'book-button-2':
-        selectedPackage = tourPackages[1].title;
-        break;
-      case 'book-button-3':
-        selectedPackage = tourPackages[2].title;
-        break;
-      case 'book-button-4':
-        selectedPackage = tourPackages[3].title;
-        break;
-      case 'book-button-5':
-        selectedPackage = tourPackages[4].title;
-        break;
-      case 'book-button-6':
-        selectedPackage = tourPackages[5].title;
-        break;
-      case 'book-button-7':
-        selectedPackage = tourPackages[6].title;
-        break;
-      case 'book-button-8':
-        selectedPackage = tourPackages[7].title;
-        break;
-      case 'book-button-9':
-        selectedPackage = tourPackages[8].title;
-      case 'book-button-10':
-        selectedPackage = tourPackages[9].title;
-        break;
-    }
+// Event listener for form submissions
+packageCardsContainer.addEventListener('submit', function (event) {
+  if (event.target.classList.contains('enquiry-form')) {
+    event.preventDefault();
+
+    // Extract form data
+    let packageId = event.target.getAttribute('data-package-id');
+    let formData = {
+      selectedPackage: event.target.querySelector(
+        `#floatingPackage${packageId}`
+      ).value,
+      startDate: event.target.querySelector(`#floatingStartDate${packageId}`)
+        .value,
+      fullName: event.target.querySelector(`#floatingFullName${packageId}`)
+        .value,
+      phone: event.target.querySelector(`#floatingPhone${packageId}`).value,
+      message: event.target.querySelector(`#floatingMessage${packageId}`).value,
+    };
 
     var email = 'info@espreeholidays.com';
     var subject = 'Tour Package Enquiry';
-    var emailBody = `Hi, I'm interested in booking the ${selectedPackage}!`;
-    window.location.href = `mailto:${email}?subject=${encodeURIComponent(
+    var emailBody = `Hi, I'm interested in booking a tour package!\nSelected Package: ${formData.selectedPackage}\nDate of Arrival: ${formData.startDate}\nFull Name: ${formData.fullName}\nPhone: ${formData.phone}\nAdditional Instructions: ${formData.message}`;
+    var email = `mailto:${email}?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(emailBody)}`;
-  });
-}); */
+    window.open(email, '_blank').focus();
+    window.location.reload();
+  }
+});
 
 const backToTopBtn = document.getElementById('myBtn');
 function scrollFunction() {

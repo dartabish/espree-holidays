@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tour Packages</title>
+    <title>Vehicle Rentals</title>
     <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../../index.css" />
     <link rel="stylesheet" href="./styles.css" />
@@ -100,15 +100,15 @@
                   Services
                 </a>
                 <ul class="dropdown-menu" id="dropdown-menu">
-                  <li class="active">
-                    <a class="dropdown-item" href="#">Tour Packages</a>
-                  </li>
                   <li>
                     <a
                       class="dropdown-item"
-                      href="../2-vehicle-rentals/index.html"
-                      >Vehicle Rentals</a
+                      href="../1-tour-packages/index.html"
+                      >Tour Packages</a
                     >
+                  </li>
+                  <li class="active">
+                    <a class="dropdown-item" href="#">Vehicle Rentals</a>
                   </li>
                   <li>
                     <a class="dropdown-item" href="#">Heritage Tours</a>
@@ -146,10 +146,26 @@
       </div>
     </nav>
 
-    <!-- Package Container -->
-    <section id="package-cards" class="package-cards section-padding">
-      <h1 class="section-title">Our packages</h1>
-      <div class="package-card-container section-content-padding"></div>
+    <!-- Vehicle Collection -->
+    <section class="vehicles section-padding">
+      <h1 class="section-title">Our vehicles</h1>
+      <div class="vehicle-type">
+        <button class="vehicle-btn" id="cars-btn">Cars</button>
+        <button class="vehicle-btn" id="bikes-btn">Bikes</button>
+        <button class="vehicle-btn" id="scooties-btn">Scooties</button>
+      </div>
+      <br />
+      <article class="cars-container" id="cars"></article>
+      <article
+        class="bikes-container"
+        id="bikes"
+        style="display: none"
+      ></article>
+      <article
+        class="scooties-container"
+        id="scooties"
+        style="display: none"
+      ></article>
     </section>
 
     <footer class="p-4 ps-lg-5 pe-lg-5 text-center">
