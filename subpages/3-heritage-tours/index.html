@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heritage Tours</title>
+    <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../../index.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../swiper/swiper-bundle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./photoswipe/dist/photoswipe.css" />
+  </head>
+  <body>
+    <button id="myBtn" title="Go to top">
+      <i class="fa-solid fa-chevron-up"></i>
+    </button>
+    <nav
+      id="navbar"
+      class="navbar navbar-expand-xl sticky-top ps-2 pe-2 pt-3 pb-3 ps-md-5 pe-md-5 ps-xl-3 pe-xl-3 ps-xxl-5 pe-xxl-5"
+    >
+      <div id="nav-wrapper" class="container-fluid flex-row-reverse">
+        <div class="d-flex gap-3 nav-contact">
+          <span>
+            <a class="nav-contact-link" href="tel:+919419658432">
+              <i class="fa-solid fa-phone fa-lg"></i>
+            </a>
+          </span>
+          <span>
+            <a class="nav-contact-link" href="mailto:dartabish01@gmail.com">
+              <i class="fa-solid fa-envelope fa-lg"></i>
+            </a>
+          </span>
+        </div>
+
+        <a
+          id="navbar-brand"
+          class="d-flex gap-lg-3 gap-2 align-items-center navbar-brand text-center pt-0 ps-4 ps-xl-0 order-xl-1"
+          href="../../index.html"
+        >
+          <img
+            src="../../assets/logo-espree-holidays.png"
+            alt="Logo"
+            width="30"
+            height="30"
+            class="d-inline-block"
+          />
+          <div class="d-inline pt-1">Espree <span>Holidays</span></div>
+        </a>
+
+        <button
+          id="navbar-toggler"
+          class="navbar-toggler position-sticky"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvas-navbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span>
+            <i class="fa-solid fa-bars"></i>
+          </span>
+        </button>
+
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvas-navbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header ps-1 pt-3 pb-0">
+            <button
+              id="offcanvas-close-btn"
+              type="button"
+              class="btn-close btn-close-dark pt-4 pe-4"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body pt-0 pb-0">
+            <ul class="navbar-nav gap-xl-5">
+              <li class="nav-item">
+                <a class="home-link" href="../../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="" href="#">About</a>
+              </li>
+              <li class="nav-item dropdown active">
+                <a
+                  id="dropdown-toggle"
+                  class="dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Services
+                </a>
+                <ul class="dropdown-menu" id="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../1-tour-packages/index.html"
+                      >Tour Packages</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../2-vehicle-rentals/index.html"
+                      >Vehicle Rentals</a
+                    >
+                  </li>
+                  <li class="active">
+                    <a class="dropdown-item" href="#">Heritage Tours</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Homestays</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Treks</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Bike Tours</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Skiing & Snowboarding Courses</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Local Transport Service</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="" href="../../index.html#gallery">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section id="heritage-tours mb-3">
+      <article class="heritage-banner">
+        <img src="../../assets/heritage-banner.jpg" alt="" />
+      </article>
+
+      <div class="heritage-location p-4 ps-lg-0">
+        <h1 class="mb-0">Kashmir Heritage Tour</h1>
+        <i class="fa-solid fa-location-dot pe-1"></i>
+        <span>Srinagar, Jammu & Kashmir</span>
+      </div>
+    </section>
+
+    <section
+      class="heritage-details ms-2 me-2 ps-3 pe-3 d-lg-flex justify-content-evenly"
+    >
+      <div class="heritage-info">
+        <div id="about-tour" class="about-tour pt-4 pb-4">
+          <h2 class="pb-1">About this tour</h2>
+          <p>
+            Embark on a journey back in time with our Kashmir Heritage Tour, an
+            immersive experience designed to unveil the rich tapestry of
+            history, culture, and unparalleled beauty that defines Srinagar, the
+            summer capital of Jammu and Kashmir.
+          </p>
+          <p>
+            Nestled in the heart of the Kashmir Valley, Srinagar is a city where
+            history resonates on every street corner, ancient architecture
+            stands as a testament to a vibrant past, and the traditions of
+            centuries are preserved against the backdrop of the majestic
+            Himalayas.
+          </p>
+          <p class="">
+            Join us on this unforgettable voyage into the heart of Srinagar,
+            where every stone, every street, and every vista tells a story of
+            enduring heritage and timeless beauty. Discover the soul of Kashmir,
+            its people, its crafts, and its celebrated traditions, on a journey
+            that will leave you with memories to cherish for a lifetime.
+          </p>
+
+          <div>
+            <h2 class="mb-3 pb-1 pt-3">Highlights</h2>
+            <u2 class="highlights">
+              <li class="highlight">
+                Indulge in Wazwan, a symphony of flavors that define Kashmiri
+                culinary artistry.
+              </li>
+              <li class="highlight">
+                Discover Srinagar's heartbeat in the vibrant alleys of Downtown.
+              </li>
+              <li class="highlight">
+                Witness the magic of Kashmiri artisans, sculpting heritage with
+                their hands.
+              </li>
+              <li class="highlight">
+                Feel the warmth of exquisite Pashmina, the epitome of Kashmiri
+                weaving craftsmanship.
+              </li>
+              <li class="highlight">
+                Warm your soul with a cup of aromatic Kashmiri Kahwa, spiced
+                with saffron and almonds.
+              </li>
+            </u2>
+          </div>
+        </div>
+
+        <div id="itinerary" class="pt-4 pb-3">
+          <h2 class="mb-3">Itinerary</h2>
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  Accordion Item #1
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <strong>This is the first item's accordion body.</strong> It
+                  is shown by default, until the collapse plugin adds the
+                  appropriate classes that we use to style each element. These
+                  classes control the overall appearance, as well as the showing
+                  and hiding via CSS transitions. You can modify any of this
+                  with custom CSS or overriding our default variables. It's also
+                  worth noting that just about any HTML can go within the
+                  <code>.accordion-body</code>, though the transition does limit
+                  overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  Accordion Item #2
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <strong>This is the second item's accordion body.</strong> It
+                  is hidden by default, until the collapse plugin adds the
+                  appropriate classes that we use to style each element. These
+                  classes control the overall appearance, as well as the showing
+                  and hiding via CSS transitions. You can modify any of this
+                  with custom CSS or overriding our default variables. It's also
+                  worth noting that just about any HTML can go within the
+                  <code>.accordion-body</code>, though the transition does limit
+                  overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  Accordion Item #3
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <strong>This is the third item's accordion body.</strong> It
+                  is hidden by default, until the collapse plugin adds the
+                  appropriate classes that we use to style each element. These
+                  classes control the overall appearance, as well as the showing
+                  and hiding via CSS transitions. You can modify any of this
+                  with custom CSS or overriding our default variables. It's also
+                  worth noting that just about any HTML can go within the
+                  <code>.accordion-body</code>, though the transition does limit
+                  overflow.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form
+        id="heritage-form"
+        class="enquiry-form p-4 d-none d-lg-block"
+        autocomplete="on"
+      >
+        <h2 class="text-center pb-2">Check Availibility</h2>
+        <div class="form-floating mb-2">
+          <input
+            type="text"
+            name="Full Name"
+            class="form-control"
+            id="floatingFullName"
+            placeholder="Full Name"
+            required
+          />
+          <label for="floatingFullName">Full Name*</label>
+        </div>
+
+        <div class="form-floating mb-2">
+          <input
+            type="date"
+            name="Start Date"
+            class="form-control"
+            id="floatingStartDate"
+            placeholder="Date of Arrival"
+          />
+          <label for="floatingStartDate">Date of Arrival</label>
+        </div>
+
+        <div class="form-floating mb-2">
+          <input
+            type="tel"
+            name="Phone"
+            class="form-control"
+            id="floatingPhone"
+            placeholder="Phone"
+          />
+          <label for="floatingPhone">Phone (Optional)</label>
+        </div>
+        <div class="form-floating mb-2">
+          <textarea
+            class="form-control"
+            name="Message"
+            id="floatingMessage"
+            placeholder="Message"
+            style="height: 160px"
+          ></textarea>
+          <label for="floatingMessage">Additional Instructions</label>
+        </div>
+        <button type="submit" class="send-enquiry-final enquiry-btn w-100 mt-2">
+          Submit Now
+        </button>
+      </form>
+
+      <section class="check p-3">
+        <button
+          class="enquiry-btn w-100"
+          data-bs-toggle="modal"
+          data-bs-target="#heritage-modal"
+        >
+          Check Availibility
+        </button>
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="heritage-modal"
+          tabindex="-1"
+          aria-labelledby="heritage-modal"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-4">
+              <div class="d-flex justify-content-between">
+                <h4 class="fw-semi-bold">Enquiry Details</h4>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+
+              <div class="booking-details"></div>
+              <form id="heritage-form" class="enquiry-form" autocomplete="on">
+                <div class="form-floating mb-2">
+                  <input
+                    type="text"
+                    name="Full Name"
+                    class="form-control"
+                    id="floatingFullName"
+                    placeholder="Full Name"
+                    required
+                  />
+                  <label for="floatingFullName">Full Name*</label>
+                </div>
+
+                <div class="form-floating mb-2">
+                  <input
+                    type="date"
+                    name="Start Date"
+                    class="form-control"
+                    id="floatingStartDate"
+                    placeholder="Date of Arrival"
+                  />
+                  <label for="floatingStartDate">Date of Arrival</label>
+                </div>
+
+                <div class="form-floating mb-2">
+                  <input
+                    type="tel"
+                    name="Phone"
+                    class="form-control"
+                    id="floatingPhone"
+                    placeholder="Phone"
+                  />
+                  <label for="floatingPhone">Phone (Optional)</label>
+                </div>
+                <div class="form-floating mb-2">
+                  <textarea
+                    class="form-control"
+                    name="Message"
+                    id="floatingMessage"
+                    placeholder="Message"
+                    style="height: 160px"
+                  ></textarea>
+                  <label for="floatingMessage">Additional Instructions</label>
+                </div>
+                <button
+                  type="submit"
+                  class="send-enquiry-final enquiry-btn w-100 mt-4"
+                >
+                  Submit Now
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <br />
+    <br />
+
+    <footer class="p-4 ps-lg-5 pe-lg-5 text-center">
+      <div class="ruler mt-3 mb-3"></div>
+      <article
+        class="footer-contact text-center d-flex flex-column flex-lg-row justify-content-center gap-3 gap-lg-5 pt-3 pb-3"
+      >
+        <div class="footer-contact-link">
+          <i class="fa-solid fa-location-dot fa-lg pe-2"></i>
+          <span>Shalimar, Srinagar, Jammu & Kashmir</span>
+        </div>
+        <div class="footer-contact-link">
+          <i class="fa-solid fa-phone fa-lg pe-2"></i>
+          <span>+1234567890</span>
+        </div>
+        <div class="footer-contact-link">
+          <i class="fa-solid fa-envelope fa-lg pe-2"></i>
+          <span>info@espreeholidays.com</span>
+        </div>
+        <div class="footer-contact-link">
+          <i class="fa-brands fa-whatsapp fa-xl pe-2"></i>
+          <span>+1234567890</span>
+        </div>
+      </article>
+
+      <article
+        class="footer-socials d-flex justify-content-center pt-3 position-relative"
+      >
+        <div class="ruler w-100 position-absolute z-0"></div>
+        <div class="d-flex z-1 gap-3">
+          <a class="footer-social-icon">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a class="footer-social-icon">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a class="footer-social-icon">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+      </article>
+      <div class="footer-copyright pt-3 pb-3">
+        &copy; Copyright Espree Holidays 2010
+      </div>
+    </footer>
+
+    <script src="../../bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

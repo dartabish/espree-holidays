@@ -1,0 +1,135 @@
+.heritage-banner {
+  height: 60vh;
+  width: 100%;
+}
+
+.heritage-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heritage-location h1 {
+  letter-spacing: 2px;
+}
+
+.heritage-details {
+  border: 1px solid #dedede;
+  border-radius: 10px;
+}
+
+.about-tour {
+  border-bottom: 1px solid #dedede;
+}
+
+.highlights {
+  padding-left: 0;
+}
+
+.highlight {
+  list-style-type: none;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 1rem;
+}
+
+.highlight::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 25px; /* Size of the image */
+  height: 25px; /* Size of the image */
+  background-image: url('../../assets/check-circle.svg');
+  background-size: cover; /* This ensures the image covers the area, adjust as needed */
+  background-repeat: no-repeat;
+}
+
+.about-tour p,
+.highlight {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 350;
+}
+
+.heritage-amenities {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.heritage-amenity {
+  display: flex;
+  align-items: center;
+}
+
+.heritage-amenity h5 {
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 0;
+  user-select: none;
+}
+
+.heritage-amenity-icon {
+  margin-right: 15px;
+  border: 1px solid var(--active-color);
+  border-radius: 10px;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+}
+
+.check {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 992px) {
+  .heritage-details {
+    border: none;
+    border-top: 1px solid #dedede;
+    border-radius: 0;
+  }
+
+  .heritage-info {
+    width: 50%;
+  }
+
+  #heritage-form {
+    margin-top: 2rem;
+    width: 40%;
+    height: fit-content;
+    border: 1px solid #c8c8c8;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: var(--accent-color-light);
+    position: sticky;
+    top: 100px;
+  }
+
+  .check {
+    display: none;
+  }
+
+  .heritage-location {
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  .enquiry-btn {
+    background-color: var(--active-color);
+    color: white;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #heritage-form {
+    width: 30%;
+  }
+
+  .heritage-location {
+    width: 85%;
+  }
+}
