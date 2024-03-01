@@ -13,7 +13,7 @@ const headerSwiper = new Swiper('.header-swiper', {
 });
 
 const tdSwiper = new Swiper('.td-swiper', {
-  loop: true,
+  rewind: true,
   navigation: {
     nextEl: '.td-button-next',
     prevEl: '.td-button-prev',
@@ -77,6 +77,7 @@ const lightbox = new PhotoSwipeLightbox({
 lightbox.init();
 
 var gallerySwiper = new Swiper('.gallery-swiper', {
+  rewind: true,
   navigation: {
     nextEl: '.gallery-button-next',
     prevEl: '.gallery-button-prev',

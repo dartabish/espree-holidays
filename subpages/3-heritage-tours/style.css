@@ -1,5 +1,5 @@
 .heritage-banner {
-  height: 60vh;
+  height: 70vh;
   width: 100%;
 }
 
@@ -10,7 +10,13 @@
 }
 
 .heritage-location h1 {
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+}
+
+.heritage-location span,
+.fa-location-dot {
+  font-size: 18px;
+  color: rgb(103, 95, 95);
 }
 
 .heritage-details {
@@ -29,19 +35,20 @@
 .highlight {
   list-style-type: none;
   position: relative;
-  padding-left: 35px;
-  margin-bottom: 1rem;
+  padding-left: 30px;
+  padding-bottom: 10px;
 }
 
 .highlight::before {
   content: '';
   position: absolute;
   left: 0;
-  top: 0;
-  width: 25px; /* Size of the image */
-  height: 25px; /* Size of the image */
+  top: 10%;
+  transform: translateY(-10%);
+  width: 20px;
+  height: 20px;
   background-image: url('../../assets/check-circle.svg');
-  background-size: cover; /* This ensures the image covers the area, adjust as needed */
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -122,6 +129,26 @@
     background-color: var(--active-color);
     color: white;
   }
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--accent-color) !important;
+  color: var(--primary-dark) !important;
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+.accordion-button h5 {
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+.accordion-body {
+  font-weight: 300;
+  font-size: 18px;
 }
 
 @media screen and (min-width: 1200px) {

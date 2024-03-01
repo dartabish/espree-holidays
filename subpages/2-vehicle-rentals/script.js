@@ -276,23 +276,8 @@ function displayVehicles(object, container) {
   });
 }
 
-function getFormData(vehicleId) {
-  return {
-    serviceType: document.getElementById(`floatingService${vehicleId}`).value,
-    selectedVehicle: document.getElementById(`floatingVehicle${vehicleId}`)
-      .value,
-    name: document.getElementById(`floatingFullName${vehicleId}`).value,
-    phone: document.getElementById(`floatingPhone${vehicleId}`).value,
-    date: document.getElementById(`floatingDate${vehicleId}`).value,
-    time: document.getElementById(`floatingTime${vehicleId}`).value,
-    email: document.getElementById(`floatingEmail${vehicleId}`).value,
-    message: document.getElementById(`floatingMessage${vehicleId}`).value,
-  };
-}
-
 function handleFormSubmission(event) {
   event.preventDefault();
-  // Extract form data
   let vehicleId = event.target.getAttribute('data-vehicle-id');
 
   let formData = {
@@ -311,7 +296,7 @@ function handleFormSubmission(event) {
   window.open(email, '_blank').focus();
 }
 
-document.addEventListener('submit', function (event) {
+document.addEventListener('submit', event => {
   if (event.target.classList.contains('booking-form')) {
     handleFormSubmission(event);
   }
