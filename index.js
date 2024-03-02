@@ -32,12 +32,6 @@ const tdSwiper = new Swiper('.td-swiper', {
   },
 });
 
-/* document.querySelector('.services-wrapper').addEventListener('click', e => {
-  if (e.target.classList.contains('navigate')) {
-    window.location.href = e.target.getAttribute('data-url');
-  }
-}); */
-
 /* Back to top button toggle functionality */
 const backToTopBtn = document.getElementById('myBtn');
 function scrollFunction() {

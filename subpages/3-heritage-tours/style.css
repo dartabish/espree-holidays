@@ -1,5 +1,5 @@
 .heritage-banner {
-  height: 70vh;
+  height: 50vh;
   width: 100%;
 }
 
@@ -94,6 +94,10 @@
 }
 
 @media screen and (min-width: 992px) {
+  .heritage-banner {
+    height: 70vh;
+  }
+
   .heritage-details {
     border: none;
     border-top: 1px solid #dedede;

@@ -1,0 +1,16 @@
+.highlight::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5%;
+  transform: translateY(-10%);
+  width: 20px;
+  height: 20px;
+  background-image: url('../../assets/check-circle.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.about-tour {
+  border-bottom: none;
+}
