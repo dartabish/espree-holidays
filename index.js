@@ -2,14 +2,16 @@ import PhotoSwipeLightbox from './photoswipe/dist/photoswipe-lightbox.esm.js';
 
 const headerSwiper = new Swiper('.header-swiper', {
   loop: true,
+  rewind: true,
   navigation: {
     nextEl: '.header-button-next',
     prevEl: '.header-button-prev',
   },
   autoplay: {
-    delay: 3000,
+    delay: 2500,
   },
   speed: 1000,
+  effect: 'fade',
 });
 
 const tdSwiper = new Swiper('.td-swiper', {
@@ -19,6 +21,7 @@ const tdSwiper = new Swiper('.td-swiper', {
     prevEl: '.td-button-prev',
   },
 
+  speed: 700,
   spaceBetween: 25,
   slidesPerView: 2,
   breakpoints: {

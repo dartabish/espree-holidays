@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Treks</title>
+    <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../../index.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../swiper/swiper-bundle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <button id="myBtn" title="Go to top">
+      <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <header class="d-flex flex-column">
+      <nav
+        id="navbar"
+        class="navbar navbar-expand-xl sticky-top ps-2 pe-2 pt-3 pb-3 ps-md-5 pe-md-5 ps-xl-3 pe-xl-3 ps-xxl-5 pe-xxl-5"
+      >
+        <div id="nav-wrapper" class="container-fluid flex-row-reverse">
+          <div class="d-flex gap-3 nav-contact">
+            <span>
+              <a class="nav-contact-link" href="tel:+919419658432">
+                <i class="fa-solid fa-phone fa-lg"></i>
+              </a>
+            </span>
+            <span>
+              <a class="nav-contact-link" href="mailto:dartabish01@gmail.com">
+                <i class="fa-solid fa-envelope fa-lg"></i>
+              </a>
+            </span>
+          </div>
+
+          <a
+            id="navbar-brand"
+            class="d-flex gap-lg-3 gap-2 align-items-center navbar-brand text-center pt-0 ps-4 ps-xl-0 order-xl-1"
+            href="../../index.html"
+          >
+            <img
+              src="../../assets/logo-espree-holidays.png"
+              alt="Logo"
+              width="30"
+              height="30"
+              class="d-inline-block"
+            />
+            <div class="d-inline pt-1">Espree <span>Holidays</span></div>
+          </a>
+
+          <button
+            id="navbar-toggler"
+            class="navbar-toggler position-sticky"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvas-navbar"
+            aria-controls="offcanvasDarkNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span>
+              <i class="fa-solid fa-bars"></i>
+            </span>
+          </button>
+
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvas-navbar"
+            aria-labelledby="offcanvasDarkNavbarLabel"
+          >
+            <div class="offcanvas-header ps-1 pt-3 pb-0">
+              <button
+                id="offcanvas-close-btn"
+                type="button"
+                class="btn-close btn-close-dark pt-4 pe-4"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body pt-0 pb-0">
+              <ul class="navbar-nav gap-xl-5">
+                <li class="nav-item">
+                  <a class="home-link" href="../../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="" href="#">About</a>
+                </li>
+                <li class="nav-item dropdown active">
+                  <a
+                    id="dropdown-toggle"
+                    class="dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Services
+                  </a>
+                  <ul class="dropdown-menu" id="dropdown-menu">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="../1-tour-packages/index.html"
+                        >Tour Packages</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="../2-vehicle-rentals/index.html"
+                        >Vehicle Rentals</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="../3-heritage-tours/index.html"
+                        >Heritage Tours</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Homestays</a>
+                    </li>
+                    <li class="active">
+                      <a class="dropdown-item" href="#">Treks</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="../6-bike-tours/index.html"
+                        >Bike Tours</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="../7-skiing & snowboarding/index.html"
+                        >Skiing & Snowboarding Courses</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="../8-local-transport/index.html"
+                        >Local Transport Service</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="" href="../../index.html#gallery">Gallery</a>
+                </li>
+                <li class="nav-item">
+                  <a class="" href="#">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="swiper trek-swiper mt-2">
+        <div class="swiper-wrapper trek-swiper-wrapper">
+          <div class="swiper-slide trek-slide">
+            <img
+              src="https://images.unsplash.com/photo-1676441696009-d6c02ff4b5d6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide trek-slide">
+            <img
+              src="https://images.unsplash.com/photo-1584005609832-c8ec2a001ae3?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide trek-slide">
+            <img
+              src="https://images.unsplash.com/photo-1533112546409-15893dbfe5e8?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide trek-slide">
+            <img
+              src="https://images.unsplash.com/photo-1545624798-df0dd0ab9190?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div
+          id="trek-button-prev"
+          class="swiper-button-prev trek-button-prev pt-4 ps-lg-5 fw-bolder"
+        ></div>
+        <div
+          id="trek-button-next"
+          class="swiper-button-next trek-button-next pt-4 pe-lg-5 fw-bolder"
+        ></div>
+      </div>
+    </header>
+
+    <!-- TrekContainer -->
+    <section id="package-cards" class="package-cards section-padding">
+      <h1 class="section-title">Our famous treks</h1>
+      <div class="trek-type-btns d-flex gap-3 justify-content-center">
+        <button class="trek-btn" id="long-trek-btn">Long Treks</button>
+        <button class="trek-btn" id="soft-trek-btn">Soft Treks</button>
+      </div>
+      <br />
+      <article
+        class="package-card-container long-trek-container"
+        id="long-trek"
+      ></article>
+      <article
+        class="package-card-container soft-trek-container"
+        id="soft-trek"
+      ></article>
+    </section>
+
+    <article class="essential-info-wrapper section-padding ps-3 pe-3">
+      <h1 class="section-title">Trekking guidelines</h1>
+      <div
+        class="accordion accordion-flush essential-info-accordion"
+        id="accordionFlushExample"
+      >
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed ps-3 pe-3"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#essential-info-one"
+              aria-expanded="false"
+              aria-controls="essential-info-one"
+            >
+              <h4 class="essential-info-title">
+                Physical Fitness Requirements
+              </h4>
+            </button>
+          </h2>
+          <div
+            id="essential-info-one"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body ps-4 ps-md-5">
+              <ul class="essential-info-text">
+                <li class="">
+                  General Fitness: All trekkers should maintain a basic level of
+                  fitness. Soft trek participants should focus on regular
+                  walking or light jogging. Long trek participants are advised
+                  to engage in more rigorous cardio exercises like running,
+                  cycling, or swimming to build endurance.
+                </li>
+                <li>
+                  Strength and Flexibility: Basic strength training exercises
+                  such as squats, lunges, and planks are recommended for all.
+                  Adding stretching or yoga can significantly improve
+                  flexibility and reduce the risk of injuries. Long trekkers
+                  should increase the intensity and include exercises focused on
+                  legs, back, and core.
+                </li>
+                <li>
+                  Altitude Acclimatization: Especially pertinent for long treks,
+                  preparing for higher elevations through altitude training or
+                  hiking at elevation, if accessible, can be beneficial.
+                </li>
+                <li>
+                  Mental Preparation: Mental resilience is crucial, particularly
+                  for long treks. Practices such as meditation or mindfulness
+                  can help prepare for the psychological challenges of trekking.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed ps-3 pe-3"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#essential-info-two"
+              aria-expanded="false"
+              aria-controls="essential-info-two"
+            >
+              <h4 class="essential-info-title">Gear and Equipment</h4>
+            </button>
+          </h2>
+          <div
+            id="essential-info-two"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body ps-4 ps-md-5">
+              <ul class="essential-info-text">
+                <li>Comfortable, broken-in hiking boots/shoes</li>
+                <li>Weather-appropriate clothing (layering is key)</li>
+                <li>Backpack with rain cover</li>
+                <li>Water bottles or hydration system</li>
+                <li>Headlamp or flashlight with extra batteries</li>
+                <li>Basic first-aid kit</li>
+                <li>Sun protection (sunglasses, sunscreen, hat)</li>
+                <li>Trekking poles (recommended for long treks)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed ps-3 pe-3"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#essential-info-three"
+              aria-expanded="false"
+              aria-controls="essential-info-three"
+            >
+              <h4 class="essential-info-title">Necessary Documents/IDs</h4>
+            </button>
+          </h2>
+          <div
+            id="essential-info-three"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body ps-4 ps-md-5">
+              <ul class="essential-info-text">
+                <li>Valid government-issued photo ID</li>
+                <li>Trekking permits (if required by the destination)</li>
+                <li>
+                  Medical certificate stating fitness for high-altitude trekking
+                  (for long treks)
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <footer class="p-4 ps-lg-5 pe-lg-5 text-center">
+      <div class="ruler mt-3 mb-3"></div>
+      <article
+        class="footer-contact text-center d-flex flex-column flex-lg-row justify-content-center gap-3 gap-lg-5 pt-3 pb-3"
+      >
+        <div class="footer-contact-link">
+          <i class="fa-solid fa-location-dot fa-lg pe-2"></i>
+          <span>Shalimar, Srinagar, Jammu & Kashmir</span>
+        </div>
+        <div class="footer-contact-link">
+          <i class="fa-solid fa-phone fa-lg pe-2"></i>
+          <span>+1234567890</span>
+        </div>
+        <div class="footer-contact-link">
+          <i class="fa-solid fa-envelope fa-lg pe-2"></i>
+          <span>info@espreeholidays.com</span>
+        </div>
+        <div class="footer-contact-link">
+          <i class="fa-brands fa-whatsapp fa-xl pe-2"></i>
+          <span>+1234567890</span>
+        </div>
+      </article>
+
+      <article
+        class="footer-socials d-flex justify-content-center pt-3 position-relative"
+      >
+        <div class="ruler w-100 position-absolute z-0"></div>
+        <div class="d-flex z-1 gap-3">
+          <a class="footer-social-icon">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a class="footer-social-icon">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a class="footer-social-icon">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+      </article>
+      <div class="footer-copyright pt-3 pb-3">
+        &copy; Copyright Espree Holidays 2010
+      </div>
+    </footer>
+
+    <script src="../../bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="../../swiper/swiper-bundle.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

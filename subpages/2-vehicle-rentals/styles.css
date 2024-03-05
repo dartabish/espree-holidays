@@ -86,7 +86,7 @@
   padding: 10px 25px;
 }
 
-.vehicle-type-button-active {
+.vehicle-type-button:active {
   color: var(--active-color);
   background-color: white;
 }

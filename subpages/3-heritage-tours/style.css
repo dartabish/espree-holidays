@@ -93,11 +93,13 @@
   justify-content: center;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
   .heritage-banner {
     height: 70vh;
   }
+}
 
+@media screen and (min-width: 992px) {
   .heritage-details {
     border: none;
     border-top: 1px solid #dedede;

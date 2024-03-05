@@ -594,7 +594,7 @@ tourPackages.forEach(tourPackage => {
                     aria-expanded="false"
                     aria-controls="itenary-${tourPackage.id}"
                   >
-                    <h5 class="accordion-title">Itenary</h5>
+                    <h5 class="accordion-title">Itinerary</h5>
                   </button>
                 </h2>
                 <div

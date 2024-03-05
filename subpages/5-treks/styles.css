@@ -1,0 +1,114 @@
+header {
+  height: 60vh;
+  background-color: var(--accent-color-light);
+}
+
+.trek-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.trek-slide {
+  user-select: none;
+}
+
+.trek-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#trek-button-next,
+#trek-button-prev {
+  color: var(--active-color);
+}
+
+#trek-button-next::after,
+#trek-button-prev::after {
+  font-size: 30px;
+}
+
+.trek-type {
+  width: 100%;
+  text-align: center;
+}
+
+.trek-btn {
+  font-size: 1.5rem;
+  background-color: var(--active-color);
+  color: white;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  padding: 10px 25px;
+}
+
+.trek-btn:active {
+  background-color: var(--hover-color);
+}
+
+.essential-info-wrapper {
+  margin-inline: auto;
+}
+
+.essential-info-accordion {
+  border: 1px solid #dedede;
+  border-radius: 5px;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--primary-dark) !important;
+}
+
+.essential-info-title {
+  font-weight: 400;
+}
+
+.essential-info-text {
+  font-size: 18px;
+  font-weight: 350;
+}
+
+.essential-info-text li {
+  padding-bottom: 20px;
+}
+
+.essential-info-text li::marker {
+  color: var(--active-color);
+}
+
+.soft-trek-plan {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 768px) {
+  .trek-swiper {
+    border-radius: 10px;
+    width: 98%;
+  }
+
+  .trek-swiper-wrapper {
+    border-radius: 10px;
+  }
+
+  .trek-slide {
+    border-radius: 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    height: 80vh;
+  }
+
+  #trek-button-next::after,
+  #trek-button-prev::after {
+    font-size: 40px;
+  }
+
+  .essential-info-wrapper {
+    width: 84%;
+  }
+}
