@@ -34,7 +34,7 @@ forms.forEach(form => {
     console.log('Name:', name);
     var email = 'info@espreeholidays.com';
     var subject = 'Homestay Enquiry';
-    var emailBody = `Hi, I'm interested in booking a homestay!\nFull Name: ${name}\nDate of Arrival: ${startDate}\nNo. of Guests: ${guests}\nPhone: ${phone}\nAdditional Instructions: ${message}`;
+    var emailBody = `Hi, I'm interested in booking a homestay!\nFull Name: ${name}\nDate of Arrival: ${startDate}\nNo. of Guests: ${guests}\nPhone: ${phone}\nMessage: ${message}`;
     var email = `mailto:${email}?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(emailBody)}`;

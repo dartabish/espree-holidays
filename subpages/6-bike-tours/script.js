@@ -411,7 +411,7 @@ packageCardsContainer.addEventListener('submit', function (event) {
 
     var email = 'info@espreeholidays.com';
     var subject = 'Tour Package Enquiry';
-    var emailBody = `Hi, I'm interested in booking a tour package!\nSelected Package: ${formData.selectedPackage}\nDate of Arrival: ${formData.startDate}\nFull Name: ${formData.fullName}\nPhone: ${formData.phone}\nAdditional Instructions: ${formData.message}`;
+    var emailBody = `Hi, I'm interested in booking a tour package!\nSelected Package: ${formData.selectedPackage}\nDate of Arrival: ${formData.startDate}\nFull Name: ${formData.fullName}\nPhone: ${formData.phone}\nMessage: ${formData.message}`;
     var email = `mailto:${email}?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(emailBody)}`;

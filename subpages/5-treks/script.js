@@ -981,7 +981,7 @@ function handleFormSubmission(event) {
 
   var email = 'info@espreeholidays.com';
   var subject = 'Vehicle Rental Enquiry';
-  var emailBody = `Hi, I'm interested in your Trek packages!\nSelected Trek: ${formData.trek}\nFull Name: ${formData.fullName}\nPhone: ${formData.phone}\nAdditional Instructions: ${formData.message}`;
+  var emailBody = `Hi, I'm interested in your Trek packages!\nSelected Trek: ${formData.trek}\nFull Name: ${formData.fullName}\nPhone: ${formData.phone}\nMessage: ${formData.message}`;
   var email = `mailto:${email}?subject=${encodeURIComponent(
     subject
   )}&body=${encodeURIComponent(emailBody)}`;

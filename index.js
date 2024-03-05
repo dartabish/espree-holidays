@@ -34,9 +34,14 @@ const tdSwiper = new Swiper('.td-swiper', {
     },
   },
 });
+const backToTopBtn = document.getElementById('myBtn');
+
+window.addEventListener('load', function () {
+  var loader = document.getElementById('loader');
+  loader.style.display = 'none';
+});
 
 /* Back to top button toggle functionality */
-const backToTopBtn = document.getElementById('myBtn');
 function scrollFunction() {
   if (
     document.body.scrollTop > 1000 ||
