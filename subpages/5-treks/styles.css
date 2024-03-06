@@ -21,7 +21,7 @@ header {
 
 #trek-button-next,
 #trek-button-prev {
-  color: var(--active-color);
+  color: white;
 }
 
 #trek-button-next::after,
@@ -62,12 +62,13 @@ header {
 }
 
 .essential-info-title {
-  font-weight: 400;
+  font-weight: 350;
+  letter-spacing: 1px;
 }
 
 .essential-info-text {
-  font-size: 18px;
-  font-weight: 350;
+  font-size: 20px;
+  font-weight: 300;
 }
 
 .essential-info-text li {

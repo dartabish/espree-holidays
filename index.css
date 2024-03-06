@@ -276,15 +276,7 @@ header {
 }
 
 .td-slide h4 {
-  letter-spacing: 1px;
   margin-top: 1rem;
-  font-weight: 300;
-  transition: color 0.2s ease-in-out;
-}
-
-.td-slide h4:hover {
-  color: var(--hover-color);
-  cursor: pointer;
 }
 
 .td-img-container {
@@ -315,6 +307,19 @@ header {
 
 .td-img-container:hover img {
   transform: scale(1.3);
+}
+
+.td-link a {
+  text-decoration: none;
+  color: var(--primary-dark);
+  letter-spacing: 1px;
+  font-weight: 300;
+  transition: color 0.2s ease-in-out;
+}
+
+.td-link a:hover {
+  color: var(--hover-color);
+  cursor: pointer;
 }
 
 #td-button-prev,
@@ -418,6 +423,10 @@ header {
   background-color: var(--hover-color);
 }
 
+.service-active a {
+  color: var(--active-color);
+}
+
 /* Gallery */
 .gallery-wrapper-main {
   height: 60vh;
@@ -488,6 +497,16 @@ footer {
 
 .footer-contact-link {
   cursor: pointer;
+}
+
+.footer-contact-link a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-contact-link a:hover {
+  color: var(--hover-color);
 }
 
 .footer-contact i {
@@ -675,9 +694,6 @@ footer {
 }
 
 /* Cards */
-.service-active a {
-  color: var(--active-color);
-}
 
 /* .package-hero {
   background: linear-gradient(rgb(100 100 100 / 70%), rgba(17, 17, 17, 0.7)),

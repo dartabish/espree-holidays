@@ -1,0 +1,57 @@
+.about-banner {
+  background-image: url('../../assets/about-banner.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+  position: relative;
+}
+
+/* .about-banner::after {
+  content: ''; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); 
+} */
+
+.about-banner h1 {
+  color: white;
+  font-size: 4rem;
+  position: absolute;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+.about-subtitle {
+  letter-spacing: 1px;
+}
+
+.about-subtext {
+  margin-bottom: 2rem;
+  color: #727272;
+  font-size: 17px;
+  line-height: 35px;
+  font-weight: 350;
+}
+
+.about-values,
+.about-mission {
+  flex: 1;
+}
+
+.about-values .about-subtext ul li::marker {
+  color: var(--active-color);
+}
+
+.about-value-title {
+  font-weight: 450;
+}
+
+@media screen and (min-width: 992px) {
+  .about-details {
+    width: 90%;
+    margin-inline: auto;
+  }
+}
