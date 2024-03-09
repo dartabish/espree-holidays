@@ -170,6 +170,7 @@ header {
 
 .logo-text {
   font-family: 'MyCustomFont', sans-serif;
+  user-select: none;
 }
 
 #navbar-toggler {
