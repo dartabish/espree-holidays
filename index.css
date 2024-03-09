@@ -3,7 +3,7 @@
 
 @font-face {
   font-family: 'MyCustomFont';
-  src: url('./Cooper Black Italic.otf') format('opentype');
+  src: url('./Cooper Black Regular.ttf') format('truetype');
 }
 
 * {
@@ -159,8 +159,6 @@ header {
 }
 
 #navbar-brand div {
-  font-size: 28px;
-  font-style: italic;
   font-weight: 500;
   font-family: 'MyCustomFont', sans-serif;
 }
