@@ -86,7 +86,7 @@ body {
 
 /* Header */
 header {
-  height: 87dvh;
+  height: 60dvh;
   position: relative;
 }
 
@@ -633,6 +633,9 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
+  header {
+    height: 85vh;
+  }
 }
 
 @media screen and (min-width: 1200px) {
