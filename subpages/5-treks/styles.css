@@ -1,6 +1,5 @@
-header {
+.treks-header-swiper {
   height: 60vh;
-  background-color: var(--accent-color-light);
 }
 
 .trek-swiper {

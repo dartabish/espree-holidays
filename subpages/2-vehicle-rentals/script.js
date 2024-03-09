@@ -17,22 +17,9 @@ const carCollection = [
     baggage: 5,
     image: '../../assets/vehicle-rentals/fortuner.png',
   },
+
   {
     id: 'car-3',
-    name: 'Toyota Innova',
-    seats: 6,
-    baggage: 5,
-    image: '../../assets/vehicle-rentals/innova.png',
-  },
-  {
-    id: 'car-4',
-    name: 'Toyota Crysta Luxury',
-    seats: 6,
-    baggage: 5,
-    image: '../../assets/vehicle-rentals/crysta.png',
-  },
-  {
-    id: 'car-5',
     name: 'Mahindra Scorpio',
     seats: 6,
     baggage: 5,
@@ -166,7 +153,10 @@ function displayVehicles(object, container) {
                 </div>
               <div class="booking-details">
               </div>
-              <form id="bookingForm${vehicle.id}" class="booking-form" data-vehicle-id="${vehicle.id}"  method="POST">
+              <form  action="https://formsubmit.co/info@espreeholidays.com" method="POST" id="bookingForm${vehicle.id}" class="booking-form" data-vehicle-id="${vehicle.id}"  method="POST">
+              <input type="hidden" name="_subject" value="Vehicle Rentals Enquiry!">
+              <input type="hidden" name="_captcha" value="false">
+              
               <div class="form-floating d-flex">
               <input
               readonly
@@ -191,6 +181,19 @@ function displayVehicles(object, container) {
                   />
                 <label for="floatingFullName${vehicle.id}">Full Name*</label>
                 </div>
+
+                 <div class="form-floating mb-2">
+                            <input
+                                type="email"
+                                name="Email"
+                                class="form-control"
+                                id="floatingEmail${vehicle.id}"
+                                placeholder="Email"
+                                required
+                            />
+                            <label for="floatingEmail${vehicle.id}">Email*</label>
+                        </div>
+
                 <div class="form-floating mb-2">
                  <input
                  type="tel"
@@ -227,7 +230,7 @@ function displayVehicles(object, container) {
   });
 }
 
-function handleFormSubmission(event) {
+/* function handleFormSubmission(event) {
   event.preventDefault();
   let vehicleId = event.target.getAttribute('data-vehicle-id');
 
@@ -245,14 +248,14 @@ function handleFormSubmission(event) {
     subject
   )}&body=${encodeURIComponent(emailBody)}`;
   window.open(email, '_blank').focus();
-}
+} */
 
-document.addEventListener('submit', event => {
+/* document.addEventListener('submit', event => {
   if (event.target.classList.contains('booking-form')) {
     handleFormSubmission(event);
   }
   location.reload();
-});
+}); */
 
 const backToTopBtn = document.getElementById('myBtn');
 function scrollFunction() {

@@ -228,7 +228,7 @@ bikeTours.forEach(tour => {
           </div>
           
           <ul
-            class="package-card-amenities mb-0 pb-0 ps-4"
+            class="package-card-amenities mb-3 pb-0 ps-4"
           >
             <li>
               <div class="package-card-amenity" title="Duration">
@@ -258,7 +258,7 @@ bikeTours.forEach(tour => {
                     aria-expanded="false"
                     aria-controls="itenary-${tour.id}"
                   >
-                    <h5 class="accordion-title">Itenary</h5>
+                    <h5 class="accordion-title">Itinerary</h5>
                   </button>
                 </h2>
                 <div
@@ -307,11 +307,18 @@ bikeTours.forEach(tour => {
                     </div>
                     
                     <div class="booking-details"></div>
-                    <form id="bookingForm${
-                      tour.id
-                    }" class="enquiry-form" data-package-id="${
+                    <form action="https://formsubmit.co/info@espreeholidays.com"
+                method="POST" id="bookingForm${
+                  tour.id
+                }" class="enquiry-form" data-package-id="${
     tour.id
   }"  autocomplete="on">
+  <input
+                  type="hidden"
+                  name="_subject"
+                  value="Bike Tour Enquiry!"
+                />
+                <input type="hidden" name="_captcha" value="false" />
                         <div class="form-floating" >
                             <input
                             readonly
@@ -342,6 +349,32 @@ bikeTours.forEach(tour => {
                             }">Full Name*</label>
                         </div>
 
+                         <div class="form-floating mb-2">
+                            <input
+                                type="email"
+                                name="Email"
+                                class="form-control"
+                                id="floatingEmail${tour.id}"
+                                placeholder="Email"
+                                required
+                            />
+                            <label for="floatingEmail${tour.id}">Email*</label>
+                        </div>
+
+                        
+                        <div class="form-floating mb-2">
+                            <input
+                                type="tel"
+                                name="Phone"
+                                class="form-control"
+                                id="floatingPhone${tour.id}"
+                                placeholder="Phone"
+                            />
+                            <label for="floatingPhone${
+                              tour.id
+                            }">Phone (Optional)</label>
+                        </div>
+
                         <div class="form-floating mb-2 ">
                               <input
                                 type="date"
@@ -355,18 +388,6 @@ bikeTours.forEach(tour => {
                               }">Date of Arrival</label>
                           </div>
 
-                        <div class="form-floating mb-2">
-                            <input
-                                type="tel"
-                                name="Phone"
-                                class="form-control"
-                                id="floatingPhone${tour.id}"
-                                placeholder="Phone"
-                            />
-                            <label for="floatingPhone${
-                              tour.id
-                            }">Phone (Optional)</label>
-                        </div>
                         <div class="form-floating mb-2">
                               <textarea
                                 class="form-control"
@@ -391,7 +412,7 @@ bikeTours.forEach(tour => {
 });
 
 // Event listener for form submissions
-packageCardsContainer.addEventListener('submit', function (event) {
+/* packageCardsContainer.addEventListener('submit', function (event) {
   if (event.target.classList.contains('enquiry-form')) {
     event.preventDefault();
 
@@ -419,7 +440,7 @@ packageCardsContainer.addEventListener('submit', function (event) {
     window.location.reload();
   }
 });
-
+ */
 const backToTopBtn = document.getElementById('myBtn');
 function scrollFunction() {
   if (

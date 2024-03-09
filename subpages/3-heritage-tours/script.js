@@ -20,7 +20,7 @@ window.onscroll = function () {
   scrollFunction();
 };
 
-forms = document.querySelectorAll('.enquiry-form');
+/* forms = document.querySelectorAll('.enquiry-form');
 forms.forEach(form => {
   form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -40,3 +40,4 @@ forms.forEach(form => {
     window.open(email, '_blank').focus();
   });
 });
+ */

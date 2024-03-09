@@ -28,12 +28,20 @@
       <div id="nav-wrapper" class="container-fluid flex-row-reverse">
         <div class="d-flex gap-3 nav-contact">
           <span>
-            <a class="nav-contact-link" href="tel:+919419658432">
+            <a
+              class="nav-contact-link"
+              href="tel:+919797027002"
+              target="_blank"
+            >
               <i class="fa-solid fa-phone fa-lg"></i>
             </a>
           </span>
           <span>
-            <a class="nav-contact-link" href="mailto:dartabish01@gmail.com">
+            <a
+              class="nav-contact-link"
+              href="mailto:info@espreeholidays.com"
+              target="_blank"
+            >
               <i class="fa-solid fa-envelope fa-lg"></i>
             </a>
           </span>
@@ -51,7 +59,9 @@
             height="30"
             class="d-inline-block"
           />
-          <div class="d-inline pt-1">Espree <span>Holidays</span></div>
+          <div class="d-inline pt-1" id="logo-text">
+            Espree <span>Holidays</span>
+          </div>
         </a>
 
         <button
@@ -102,7 +112,11 @@
                 </a>
                 <ul class="dropdown-menu" id="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="#">Tour Packages</a>
+                    <a
+                      class="dropdown-item"
+                      href="../1-tour-packages/index.html"
+                      >Tour Packages</a
+                    >
                   </li>
                   <li>
                     <a
@@ -168,8 +182,7 @@
     </section>
 
     <section class="contact-details section-padding ps-2 pe-2">
-      <h1 class="section-title">Contact Details</h1>
-      <div class="card-container section-content-padding">
+      <div class="card-container section-padding">
         <article class="contact-detail">
           <div class="contact-detail-icon">
             <i class="fa-solid fa-location-dot"></i>
@@ -177,8 +190,12 @@
           <div class="contact-detail-info">
             <h3>Our Location</h3>
             <h5>
-              Shalimar, Srinagar,
-              <span class="d-block">Jammu & Kashmir</span>
+              <a
+                href="https://www.google.com/maps/place/Shalimar,+Srinagar+190025/@34.1493346,74.8657643,15z/data=!3m1!4b1!4m6!3m5!1s0x38e1869c5c8f3c35:0xbcd9832b0edcf691!8m2!3d34.1516846!4d74.8762972!16s%2Fg%2F1vv2qmbx?entry=ttu"
+              >
+                Shalimar, Srinagar,
+                <span class="d-block">Jammu & Kashmir</span>
+              </a>
             </h5>
           </div>
         </article>
@@ -201,7 +218,7 @@
           </div>
           <div class="contact-detail-info">
             <h3>Phone Number</h3>
-            <h5><a href="tel:+1234567890">+1234567890</a></h5>
+            <h5><a href="tel:+979797027002">+91-9797027002</a></h5>
           </div>
         </article>
       </div>
@@ -211,10 +228,14 @@
       <h1 class="section-title">Send Us A Message</h1>
       <article class="form-container">
         <form
+          action="https://formsubmit.co/info@espreeholidays.com"
+          method="POST"
           id="contact-form"
           class="p-4 d-flex flex-column"
           autocomplete="on"
         >
+          <input type="hidden" name="_subject" value="Contact Enquiry!" />
+          <input type="hidden" name="_captcha" value="false" />
           <div class="form-floating mb-4">
             <input
               type="text"
@@ -224,19 +245,19 @@
               placeholder="Full Name"
               required
             />
-            <label for="floatingFullName">Your Name</label>
+            <label for="floatingFullName">Your Name*</label>
           </div>
 
-          <div class="form-floating mb-4">
+          <div class="form-floating mb-2">
             <input
-              type="text"
-              name="Subject"
+              type="email"
+              name="Email"
               class="form-control"
-              id="floatingSubject"
-              placeholder="Subject"
+              id="floatingEmail"
+              placeholder="Email"
               required
             />
-            <label for="floatingSubject">Subject</label>
+            <label for="floatingEmail">Email*</label>
           </div>
 
           <div class="form-floating mb-4">
@@ -248,6 +269,18 @@
               placeholder="Phone"
             />
             <label for="floatingPhone">Phone (Optional)</label>
+          </div>
+
+          <div class="form-floating mb-4">
+            <input
+              type="text"
+              name="Subject"
+              class="form-control"
+              id="floatingSubject"
+              placeholder="Subject"
+              required
+            />
+            <label for="floatingSubject">Subject*</label>
           </div>
 
           <div class="form-floating mb-4">
@@ -289,7 +322,7 @@
             width="84"
             height="84"
           />
-          <span>Espree Holidays</span>
+          <span class="logo-text">Espree Holidays</span>
         </div>
       </article>
       <div class="ruler mt-3 mb-3"></div>
@@ -297,20 +330,28 @@
         class="footer-contact text-center d-flex flex-column flex-lg-row justify-content-center gap-3 gap-lg-5 pt-3 pb-3"
       >
         <div class="footer-contact-link">
-          <i class="fa-solid fa-location-dot fa-lg pe-2"></i>
-          <a href="">Shalimar, Srinagar, Jammu & Kashmir</a>
+          <a
+            href="https://www.google.com/maps/place/Shalimar,+Srinagar+190025/@34.1493346,74.8657643,15z/data=!3m1!4b1!4m6!3m5!1s0x38e1869c5c8f3c35:0xbcd9832b0edcf691!8m2!3d34.1516846!4d74.8762972!16s%2Fg%2F1vv2qmbx?entry=ttu"
+            target="_blank"
+            ><i class="fa-solid fa-location-dot fa-lg pe-2"></i>Shalimar,
+            Srinagar, Jammu & Kashmir</a
+          >
         </div>
         <div class="footer-contact-link">
-          <i class="fa-solid fa-phone fa-lg pe-2"></i>
-          <a href="tel:">+123456789</a>
+          <a href="tel:+919797027002" target="_blank">
+            <i class="fa-solid fa-phone fa-lg pe-2"></i>+91-9797027002</a
+          >
         </div>
         <div class="footer-contact-link">
-          <i class="fa-solid fa-envelope fa-lg pe-2"></i>
-          <a href="mailto:info@espreeholidays.com">info@espreeholidays.com</a>
+          <a href="mailto:info@espreeholidays.com" target="_blank">
+            <i class="fa-solid fa-envelope fa-lg pe-2"></i
+            >info@espreeholidays.com</a
+          >
         </div>
         <div class="footer-contact-link">
-          <i class="fa-brands fa-whatsapp fa-xl pe-2"></i>
-          <a href="tel:">+123456789</a>
+          <a href="https://wa.me/9797027002" target="_blank">
+            <i class="fa-brands fa-whatsapp fa-xl pe-2"></i>+91-9797027002</a
+          >
         </div>
       </article>
 

@@ -2,7 +2,7 @@ const courses = [
   {
     id: 1,
     title: '1 Week Skiing Course in Gulmarg',
-    img: 'https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    img: 'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     details: {
       coursePlan: {
         day1: {
@@ -46,7 +46,7 @@ const courses = [
   {
     id: 2,
     title: '2 Week Skiing Course in Gulmarg',
-    img: 'https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    img: 'https://images.unsplash.com/photo-1605540436563-5bca919ae766?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     details: {
       coursePlan: {
         day: {
@@ -60,7 +60,7 @@ const courses = [
   {
     id: 3,
     title: '1 Week Snowboarding Course in Gulmarg',
-    img: 'https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    img: 'https://images.unsplash.com/photo-1553815035-92b6eef66226?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     details: {
       coursePlan: {
         day1: {
@@ -106,7 +106,7 @@ const courses = [
   {
     id: 4,
     title: '2 Week Snowboarding Course in Gulmarg',
-    img: 'https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    img: 'https://images.unsplash.com/photo-1599405653894-8a595f692abf?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     details: {
       coursePlan: {
         day: {
@@ -205,11 +205,14 @@ courses.forEach(course => {
                     </div>
                     
                     <div class="booking-details"></div>
-                    <form id="bookingForm${
-                      course.id
-                    }" class="enquiry-form" data-package-id="${
+                    <form action="https://formsubmit.co/info@espreeholidays.com"
+                method="POST" id="bookingForm${
+                  course.id
+                }" class="enquiry-form" data-package-id="${
     course.id
   }"  autocomplete="on">
+                <input type="hidden" name="_subject" value="Skiing & Snowboarding Enquiry!"/>
+                <input type="hidden" name="_captcha" value="false" />
                         <div class="form-floating" >
                             <input
                             readonly
@@ -240,18 +243,19 @@ courses.forEach(course => {
                             }">Full Name*</label>
                         </div>
 
-                        <div class="form-floating mb-2 ">
-                              <input
-                                type="date"
-                                name="Start Date"
+                         <div class="form-floating mb-2">
+                            <input
+                                type="email"
+                                name="Email"
                                 class="form-control"
-                                id="floatingStartDate${course.id}"
-                                placeholder="Date of Arrival" 
-                                />
-                              <label for="floatingStartDate${
-                                course.id
-                              }">Date of Arrival</label>
-                          </div>
+                                id="floatingEmail${course.id}"
+                                placeholder="Email"
+                                required
+                            />
+                            <label for="floatingEmail${
+                              course.id
+                            }">Email*</label>
+                        </div>
 
                         <div class="form-floating mb-2">
                             <input
@@ -265,6 +269,21 @@ courses.forEach(course => {
                               course.id
                             }">Phone (Optional)</label>
                         </div>
+
+                        <div class="form-floating mb-2 ">
+                              <input
+                                type="date"
+                                name="Start Date"
+                                class="form-control"
+                                id="floatingStartDate${course.id}"
+                                placeholder="Date of Arrival" 
+                                />
+                              <label for="floatingStartDate${
+                                course.id
+                              }">Date of Arrival</label>
+                          </div>
+
+                        
                         <div class="form-floating mb-2">
                               <textarea
                                 class="form-control"
@@ -289,7 +308,7 @@ courses.forEach(course => {
 });
 
 // Event listener for form submissions
-packageCardsContainer.addEventListener('submit', function (event) {
+/* packageCardsContainer.addEventListener('submit', function (event) {
   if (event.target.classList.contains('enquiry-form')) {
     event.preventDefault();
 
@@ -316,7 +335,7 @@ packageCardsContainer.addEventListener('submit', function (event) {
     window.open(email, '_blank').focus();
     window.location.reload();
   }
-});
+}); */
 
 const backToTopBtn = document.getElementById('myBtn');
 function scrollFunction() {

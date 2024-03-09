@@ -22,147 +22,157 @@
       <i class="fa-solid fa-chevron-up"></i>
     </button>
 
-    <header class="d-flex flex-column">
-      <nav
-        id="navbar"
-        class="navbar navbar-expand-xl fixed-top ps-2 pe-2 pt-3 pb-3 ps-md-5 pe-md-5 ps-xl-3 pe-xl-3 ps-xxl-5 pe-xxl-5"
-      >
-        <div id="nav-wrapper" class="container-fluid flex-row-reverse">
-          <div class="d-flex gap-3 nav-contact">
-            <span>
-              <a class="nav-contact-link" href="tel:+919419658432">
-                <i class="fa-solid fa-phone fa-lg"></i>
-              </a>
-            </span>
-            <span>
-              <a class="nav-contact-link" href="mailto:dartabish01@gmail.com">
-                <i class="fa-solid fa-envelope fa-lg"></i>
-              </a>
-            </span>
+    <nav
+      id="navbar"
+      class="navbar navbar-expand-xl sticky-top ps-2 pe-2 pt-3 pb-3 ps-md-5 pe-md-5 ps-xl-3 pe-xl-3 ps-xxl-5 pe-xxl-5"
+    >
+      <div id="nav-wrapper" class="container-fluid flex-row-reverse">
+        <div class="d-flex gap-3 nav-contact">
+          <span>
+            <a
+              class="nav-contact-link"
+              href="tel:+919797027002"
+              target="_blank"
+            >
+              <i class="fa-solid fa-phone fa-lg"></i>
+            </a>
+          </span>
+          <span>
+            <a
+              class="nav-contact-link"
+              href="mailto:info@espreeholidays.com"
+              target="_blank"
+            >
+              <i class="fa-solid fa-envelope fa-lg"></i>
+            </a>
+          </span>
+        </div>
+
+        <a
+          id="navbar-brand"
+          class="d-flex gap-lg-3 gap-2 align-items-center navbar-brand text-center pt-0 ps-4 ps-xl-0 order-xl-1"
+          href="../../index.html"
+        >
+          <img
+            src="../../assets/logo-espree-holidays.png"
+            alt="Logo"
+            width="30"
+            height="30"
+            class="d-inline-block"
+          />
+          <div class="d-inline pt-1">Espree <span>Holidays</span></div>
+        </a>
+
+        <button
+          id="navbar-toggler"
+          class="navbar-toggler position-sticky"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvas-navbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span>
+            <i class="fa-solid fa-bars"></i>
+          </span>
+        </button>
+
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvas-navbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header ps-1 pt-3 pb-0">
+            <button
+              id="offcanvas-close-btn"
+              type="button"
+              class="btn-close btn-close-dark pt-4 pe-4"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
           </div>
-
-          <a
-            id="navbar-brand"
-            class="d-flex gap-lg-3 gap-2 align-items-center navbar-brand text-center pt-0 ps-4 ps-xl-0 order-xl-1"
-            href="../../index.html"
-          >
-            <img
-              src="../../assets/logo-espree-holidays.png"
-              alt="Logo"
-              width="30"
-              height="30"
-              class="d-inline-block"
-            />
-            <div class="d-inline pt-1">Espree <span>Holidays</span></div>
-          </a>
-
-          <button
-            id="navbar-toggler"
-            class="navbar-toggler position-sticky"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvas-navbar"
-            aria-controls="offcanvasDarkNavbar"
-            aria-label="Toggle navigation"
-          >
-            <span>
-              <i class="fa-solid fa-bars"></i>
-            </span>
-          </button>
-
-          <div
-            class="offcanvas offcanvas-start"
-            tabindex="-1"
-            id="offcanvas-navbar"
-            aria-labelledby="offcanvasDarkNavbarLabel"
-          >
-            <div class="offcanvas-header ps-1 pt-3 pb-0">
-              <button
-                id="offcanvas-close-btn"
-                type="button"
-                class="btn-close btn-close-dark pt-4 pe-4"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="offcanvas-body pt-0 pb-0">
-              <ul class="navbar-nav gap-xl-5">
-                <li class="nav-item">
-                  <a class="home-link" href="../../index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="" href="../9-about/index.html">About</a>
-                </li>
-                <li class="nav-item dropdown active">
-                  <a
-                    id="dropdown-toggle"
-                    class="dropdown-toggle"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Services
-                  </a>
-                  <ul class="dropdown-menu" id="dropdown-menu">
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="../1-tour-packages/index.html"
-                        >Tour Packages</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="../2-vehicle-rentals/index.html"
-                        >Vehicle Rentals</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="../3-heritage-tours/index.html"
-                        >Heritage Tours</a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">Homestays</a>
-                    </li>
-                    <li class="active">
-                      <a class="dropdown-item" href="#">Treks</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="../6-bike-tours/index.html"
-                        >Bike Tours</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="../7-skiing & snowboarding/index.html"
-                        >Skiing & Snowboarding Courses</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="../8-local-transport/index.html"
-                        >Local Transport Service</a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="" href="../../index.html#gallery">Gallery</a>
-                </li>
-                <li class="nav-item">
-                  <a class="" href="#">Contact</a>
-                </li>
-              </ul>
-            </div>
+          <div class="offcanvas-body pt-0 pb-0">
+            <ul class="navbar-nav gap-xl-5">
+              <li class="nav-item">
+                <a class="home-link" href="../../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="" href="../9-about/index.html">About</a>
+              </li>
+              <li class="nav-item dropdown active">
+                <a
+                  id="dropdown-toggle"
+                  class="dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Services
+                </a>
+                <ul class="dropdown-menu" id="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../1-tour-packages/index.html"
+                      >Tour Packages</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../2-vehicle-rentals/index.html"
+                      >Vehicle Rentals</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../3-heritage-tours/index.html"
+                      >Heritage Tours</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../4-homestays/index.html"
+                      >Homestays</a
+                    >
+                  </li>
+                  <li class="active">
+                    <a class="dropdown-item" href="#">Treks</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../6-bike-tours/index.html"
+                      >Bike Tours</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../7-skiing & snowboarding/index.html"
+                      >Skiing & Snowboarding Courses</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../8-local-transport/index.html"
+                      >Local Transport Service</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="" href="../../index.html#gallery">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="" href="../10-contact/index.html">Contact</a>
+              </li>
+            </ul>
           </div>
         </div>
-      </nav>
+      </div>
+    </nav>
 
+    <section class="treks-header-swiper">
       <div class="swiper trek-swiper mt-2">
         <div class="swiper-wrapper trek-swiper-wrapper">
           <div class="swiper-slide trek-slide">
@@ -200,11 +210,11 @@
           class="swiper-button-next trek-button-next pt-4 pe-lg-5 fw-bolder"
         ></div>
       </div>
-    </header>
+    </section>
 
     <!-- TrekContainer -->
     <section id="package-cards" class="package-cards section-padding">
-      <h1 class="section-title">Our famous treks</h1>
+      <h1 class="section-title">Treks</h1>
       <div class="trek-type-btns d-flex gap-3 justify-content-center">
         <button class="trek-btn" id="long-trek-btn">Long Treks</button>
         <button class="trek-btn" id="soft-trek-btn">Soft Treks</button>
@@ -366,25 +376,35 @@
           <span>Espree Holidays</span>
         </div>
       </article>
+
       <div class="ruler mt-3 mb-3"></div>
+
       <article
         class="footer-contact text-center d-flex flex-column flex-lg-row justify-content-center gap-3 gap-lg-5 pt-3 pb-3"
       >
         <div class="footer-contact-link">
-          <i class="fa-solid fa-location-dot fa-lg pe-2"></i>
-          <a href="">Shalimar, Srinagar, Jammu & Kashmir</a>
+          <a
+            href="https://www.google.com/maps/place/Shalimar,+Srinagar+190025/@34.1493346,74.8657643,15z/data=!3m1!4b1!4m6!3m5!1s0x38e1869c5c8f3c35:0xbcd9832b0edcf691!8m2!3d34.1516846!4d74.8762972!16s%2Fg%2F1vv2qmbx?entry=ttu"
+            target="_blank"
+            ><i class="fa-solid fa-location-dot fa-lg pe-2"></i>Shalimar,
+            Srinagar, Jammu & Kashmir</a
+          >
         </div>
         <div class="footer-contact-link">
-          <i class="fa-solid fa-phone fa-lg pe-2"></i>
-          <a href="tel:">+123456789</a>
+          <a href="tel:+919797027002" target="_blank">
+            <i class="fa-solid fa-phone fa-lg pe-2"></i>+91-9797027002</a
+          >
         </div>
         <div class="footer-contact-link">
-          <i class="fa-solid fa-envelope fa-lg pe-2"></i>
-          <a href="mailto:info@espreeholidays.com">info@espreeholidays.com</a>
+          <a href="mailto:info@espreeholidays.com" target="_blank">
+            <i class="fa-solid fa-envelope fa-lg pe-2"></i
+            >info@espreeholidays.com</a
+          >
         </div>
         <div class="footer-contact-link">
-          <i class="fa-brands fa-whatsapp fa-xl pe-2"></i>
-          <a href="tel:">+123456789</a>
+          <a href="https://wa.me/9797027002" target="_blank">
+            <i class="fa-brands fa-whatsapp fa-xl pe-2"></i>+91-9797027002</a
+          >
         </div>
       </article>
 

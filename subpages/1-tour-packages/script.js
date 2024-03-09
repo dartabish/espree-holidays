@@ -643,11 +643,13 @@ tourPackages.forEach(tourPackage => {
                     </div>
                     
                     <div class="booking-details"></div>
-                    <form id="bookingForm${
+                    <form action="https://formsubmit.co/info@espreeholidays.com" method="POST" id="bookingForm${
                       tourPackage.id
                     }" class="enquiry-form" data-package-id="${
     tourPackage.id
   }"  autocomplete="on">
+                        <input type="hidden" name="_subject" value="Tour Package Enquiry!">
+                        <input type="hidden" name="_captcha" value="false">
                         <div class="form-floating" >
                             <input
                             readonly
@@ -678,18 +680,19 @@ tourPackages.forEach(tourPackage => {
                             }">Full Name*</label>
                         </div>
 
-                        <div class="form-floating mb-2 ">
-                              <input
-                                type="date"
-                                name="Start Date"
+                        <div class="form-floating mb-2">
+                            <input
+                                type="email"
+                                name="Email"
                                 class="form-control"
-                                id="floatingStartDate${tourPackage.id}"
-                                placeholder="Date of Arrival" 
-                                />
-                              <label for="floatingStartDate${
-                                tourPackage.id
-                              }">Date of Arrival</label>
-                          </div>
+                                id="floatingEmail${tourPackage.id}"
+                                placeholder="Email"
+                                required
+                            />
+                            <label for="floatingEmail${
+                              tourPackage.id
+                            }">Email*</label>
+                        </div>
 
                         <div class="form-floating mb-2">
                             <input
@@ -703,6 +706,20 @@ tourPackages.forEach(tourPackage => {
                               tourPackage.id
                             }">Phone (Optional)</label>
                         </div>
+
+                        <div class="form-floating mb-2 ">
+                              <input
+                                type="date"
+                                name="Start Date"
+                                class="form-control"
+                                id="floatingStartDate${tourPackage.id}"
+                                placeholder="Date of Arrival" 
+                                />
+                              <label for="floatingStartDate${
+                                tourPackage.id
+                              }">Date of Arrival</label>
+                          </div>
+
                         <div class="form-floating mb-2">
                               <textarea
                                 class="form-control"
@@ -727,7 +744,7 @@ tourPackages.forEach(tourPackage => {
 });
 
 // Event listener for form submissions
-packageCardsContainer.addEventListener('submit', function (event) {
+/* packageCardsContainer.addEventListener('submit', function (event) {
   if (event.target.classList.contains('enquiry-form')) {
     event.preventDefault();
 
@@ -754,7 +771,7 @@ packageCardsContainer.addEventListener('submit', function (event) {
     window.open(email, '_blank').focus();
     window.location.reload();
   }
-});
+}); */
 
 const backToTopBtn = document.getElementById('myBtn');
 function scrollFunction() {

@@ -7,10 +7,10 @@ const headerSwiper = new Swiper('.header-swiper', {
     nextEl: '.header-button-next',
     prevEl: '.header-button-prev',
   },
-  autoplay: {
+  /* autoplay: {
     delay: 2500,
-  },
-  speed: 1000,
+  }, */
+  speed: 900,
   effect: 'fade',
 });
 
@@ -34,12 +34,8 @@ const tdSwiper = new Swiper('.td-swiper', {
     },
   },
 });
-const backToTopBtn = document.getElementById('myBtn');
 
-window.addEventListener('load', function () {
-  var loader = document.getElementById('loader');
-  loader.style.display = 'none';
-});
+const backToTopBtn = document.getElementById('myBtn');
 
 /* Back to top button toggle functionality */
 function scrollFunction() {

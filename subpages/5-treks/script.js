@@ -209,7 +209,7 @@ const longTreks = [
   {
     id: 'long-trek-3',
     title: 'Sham Valley Trek / Baby Trek',
-    img: 'https://images.unsplash.com/photo-1468215804491-50dce06d81f8?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    img: 'https://images.unsplash.com/photo-1590555009076-5291296f5ab2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     details: {
       duration: {
         days: '3 - 4',
@@ -252,7 +252,7 @@ const longTreks = [
   {
     id: 'long-trek-4',
     title: 'Tulian Lake Trek',
-    img: 'https://images.unsplash.com/photo-1468215804491-50dce06d81f8?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    img: 'https://images.unsplash.com/photo-1666698590004-81cd561a35a7?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     details: {
       duration: {
         days: '2 - 3',
@@ -485,8 +485,9 @@ const softTreks = [
   {
     id: 'soft-trek-1',
     title: 'Dara - Hayan Trek ',
-    img: 'https://images.unsplash.com/photo-1631420105765-caf5ccd069bc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    img: 'https://images.unsplash.com/photo-1696615596718-c6df59650b1a?q=80&w=1886&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     details: {
+      totalDistance: '13',
       duration: {
         days: 1,
       },
@@ -499,8 +500,9 @@ const softTreks = [
   {
     id: 'soft-trek-2',
     title: 'Bajpathri Trek ',
-    img: 'https://images.unsplash.com/photo-1631420105765-caf5ccd069bc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    img: 'https://images.unsplash.com/photo-1668173357686-a243123ca182?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     details: {
+      totalDistance: '-',
       duration: {
         days: 1,
       },
@@ -513,8 +515,9 @@ const softTreks = [
   {
     id: 'soft-trek-3',
     title: 'Mamneth Top Trek',
-    img: 'https://images.unsplash.com/photo-1631420105765-caf5ccd069bc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    img: 'https://scontent.fixj1-1.fna.fbcdn.net/v/t1.6435-9/67283831_2420233871371242_6201542457386074112_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=05BamEAwgmUAX9d_K7-&_nc_ht=scontent.fixj1-1.fna&oh=00_AfA8yGzJFMaC01zmW11NGxrw86uvQs4ocxNihEW0Qo7B2Q&oe=66138BB5',
     details: {
+      totalDistance: '4',
       duration: {
         days: `1`,
       },
@@ -528,8 +531,9 @@ This location was previously only frequented by locals to get away from all the 
   {
     id: 'soft-trek-4',
     title: 'Dumb Galinishat',
-    img: 'https://images.unsplash.com/photo-1631420105765-caf5ccd069bc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    img: 'https://content3.jdmagicbox.com/comp/srinagar/y4/9999px194.x194.220327011233.l3y4/catalogue/zabarwan-range-trekking-area-nishat-srinagar-tourist-attraction-slhgz00w11.jpg',
     details: {
+      totalDistance: '-',
       duration: {
         days: `1`,
       },
@@ -745,9 +749,16 @@ function displayTreks(object, container) {
                     </div>
                     
                     <div class="booking-details"></div>
-                    <form id="bookingForm${
-                      trek.id
-                    }" class="booking-form" data-trek-id="${trek.id}">
+                    <form action="https://formsubmit.co/info@espreeholidays.com"
+                method="POST" id="bookingForm${
+                  trek.id
+                }" class="booking-form" data-trek-id="${trek.id}">
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="Trek Enquiry!"
+                />
+                <input type="hidden" name="_captcha" value="false" />
               <div class="form-floating d-flex">
               <input
               readonly
@@ -772,6 +783,19 @@ function displayTreks(object, container) {
                   />
                 <label for="floatingFullName${trek.id}">Full Name*</label>
                 </div>
+
+                <div class="form-floating mb-2">
+                            <input
+                                type="email"
+                                name="Email"
+                                class="form-control"
+                                id="floatingEmail${trek.id}"
+                                placeholder="Email"
+                                required
+                            />
+                            <label for="floatingEmail${trek.id}">Email*</label>
+                        </div>
+
                 <div class="form-floating mb-2">
                  <input
                  type="tel"
@@ -829,7 +853,7 @@ function displaySoftTreks(object, container) {
           </div>
           
           <ul
-            class="package-card-amenities d-flex flex-column flex-xl-row justify-content-center gap-3 flex-xl-wrap mb-0 ps-4 ps-xl-0 pb-1"
+            class="package-card-amenities d-flex flex-column flex-xl-row justify-content-center gap-3 flex-xl-wrap mb-2 ps-4 ps-xl-0"
           >
             <li>
               <div class="trek-card-info" title="Duration">
@@ -908,7 +932,14 @@ function displaySoftTreks(object, container) {
                     </div>
                     
                     <div class="booking-details"></div>
-                    <form id="bookingForm${trek.id}" class="booking-form" data-trek-id="${trek.id}">
+                    <form action="https://formsubmit.co/info@espreeholidays.com"
+                method="POST" id="bookingForm${trek.id}" class="booking-form" data-trek-id="${trek.id}">
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="Trek Enquiry!"
+                />
+                <input type="hidden" name="_captcha" value="false" />
               <div class="form-floating d-flex">
               <input
               readonly
@@ -933,6 +964,19 @@ function displaySoftTreks(object, container) {
                   />
                 <label for="floatingFullName${trek.id}">Full Name*</label>
                 </div>
+
+                <div class="form-floating mb-2">
+                            <input
+                                type="email"
+                                name="Email"
+                                class="form-control"
+                                id="floatingEmail${trek.id}"
+                                placeholder="Email"
+                                required
+                            />
+                            <label for="floatingEmail${trek.id}">Email*</label>
+                        </div>
+
                 <div class="form-floating mb-2">
                  <input
                  type="tel"
@@ -968,7 +1012,7 @@ function displaySoftTreks(object, container) {
   });
 }
 
-function handleFormSubmission(event) {
+/* function handleFormSubmission(event) {
   event.preventDefault();
   let trekId = event.target.getAttribute('data-trek-id');
 
@@ -993,7 +1037,7 @@ document.addEventListener('submit', event => {
     handleFormSubmission(event);
   }
   location.reload();
-});
+}); */
 
 const backToTopBtn = document.getElementById('myBtn');
 function scrollFunction() {

@@ -20,7 +20,7 @@ window.onscroll = function () {
   scrollFunction();
 };
 
-contactForm = document.getElementById('contact-form');
+/* contactForm = document.getElementById('contact-form');
 
 contactForm.addEventListener('submit', function (e) {
   e.preventDefault();
@@ -37,4 +37,4 @@ contactForm.addEventListener('submit', function (e) {
     subject
   )}&body=${encodeURIComponent(emailBody)}`;
   window.open(email, '_blank').focus();
-});
+}); */

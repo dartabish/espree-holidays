@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('./Cooper Black Italic.otf') format('opentype');
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -39,51 +44,24 @@
   padding-bottom: 1.875rem;
 }
 
-.loader {
-  position: fixed;
-  z-index: 9999;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: white url('loader.gif') no-repeat center center;
-  display: none;
-}
-
-/* Add animation */
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/* Example of a custom loader without a gif */
-.custom-loader {
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #3498db;
-  width: 120px;
-  height: 120px;
-  animation: spin 2s linear infinite;
+.modal-content button {
+  box-shadow: none !important;
 }
 
 .enquiry-btn {
+  background-color: var(--hover-color);
+  color: white;
   border: 3px solid var(--active-color);
   border-radius: 5px;
   font-size: 20px;
-  background-color: white;
   outline: none;
   padding: 0.7rem;
-  color: var(--active-color);
   transition: background-color 0.3s ease-in-out;
 }
 
 .enquiry-btn:hover {
-  background-color: var(--hover-color);
-  color: white;
+  background-color: white;
+  color: var(--active-color);
 }
 
 body {
@@ -181,12 +159,19 @@ header {
 }
 
 #navbar-brand div {
-  font-size: 22px;
+  font-size: 28px;
+  font-style: italic;
   font-weight: 500;
+  font-family: 'MyCustomFont', sans-serif;
 }
 
 #navbar-brand div span {
   color: var(--primary-dark);
+  font-family: 'MyCustomFont', sans-serif;
+}
+
+.logo-text {
+  font-family: 'MyCustomFont', sans-serif;
 }
 
 #navbar-toggler {
@@ -233,13 +218,13 @@ header {
 }
 
 .nav-item {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
 }
 
 .nav-item a {
   text-decoration: none;
   color: var(--primary-dark);
-  font-weight: 400;
+  font-weight: 450;
   letter-spacing: 1px;
 }
 
@@ -255,6 +240,11 @@ header {
 #dropdown-menu {
   user-select: none;
   border: none;
+}
+
+#dropdown-menu .dropdown-item {
+  font-weight: 350;
+  font-size: 1.15rem;
 }
 
 #dropdown-menu .dropdown-item:hover {
@@ -557,11 +547,12 @@ footer {
 @media screen and (max-width: 1200px) {
   .nav-item {
     padding: 14px 0;
-    border-bottom: 1px solid #eee;
+    /* border-bottom: 1px solid #eee; */
   }
 
   .offcanvas-body .navbar-nav {
     padding: 0 15px;
+    padding-bottom: 3rem;
   }
 
   #dropdown-menu {
@@ -571,12 +562,11 @@ footer {
   }
 
   .dropdown-menu .dropdown-item {
-    font-size: 1.2rem;
     text-wrap: wrap;
   }
 
   .dropdown-menu a {
-    border-bottom: 1px solid #eee;
+    /* border-bottom: 1px solid #eee; */
     padding: 14px 0;
   }
 
@@ -603,7 +593,7 @@ footer {
   }
 
   .nav-contact-link i {
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
 
   #td-button-prev,
@@ -613,12 +603,26 @@ footer {
 }
 
 @media screen and (min-width: 700px) {
+  #offcanvas-navbar {
+    width: 50vw;
+  }
+
   .service {
     width: 48%;
   }
 }
 
 @media screen and (min-width: 768px) {
+  .nav-contact span {
+    box-shadow: 0 0 2px grey;
+    padding: 12px;
+    border-radius: 50%;
+  }
+
+  .nav-contact-link:hover i {
+    color: #f4ab53;
+  }
+
   #td-button-prev,
   #td-button-next {
     top: 90px;
@@ -628,6 +632,9 @@ footer {
   #header-button-next::after {
     font-size: 35px;
   }
+}
+
+@media screen and (min-width: 1024px) {
 }
 
 @media screen and (min-width: 1200px) {
@@ -645,26 +652,12 @@ footer {
     padding: 0 4rem;
   }
 
-  /* .header-tagline {
-    font-weight: lighter;
-  } */
-
   .nav-item a {
     transition: color 0.1s ease-in-out;
   }
 
   .nav-item a:hover {
     color: var(--hover-color);
-  }
-
-  .nav-contact span {
-    box-shadow: 0 0 2px grey;
-    padding: 12px;
-    border-radius: 50%;
-  }
-
-  .nav-contact-link:hover i {
-    color: #f4ab53;
   }
 
   #td-button-prev,
@@ -680,7 +673,7 @@ footer {
   }
 
   .dropdown-menu .dropdown-item {
-    font-size: 1.3rem;
+    /*  font-size: 1.3rem; */
     padding: 15px 30px;
   }
 
@@ -864,20 +857,20 @@ footer {
 .package-enquiry-btn,
 .send-enquiry-final,
 .enquiry-btn {
+  background-color: var(--hover-color);
+  color: white;
   border: 3px solid var(--active-color);
   border-radius: 5px;
   font-size: 20px;
-  background-color: white;
   outline: none;
   padding: 0.7rem;
-  color: var(--active-color);
   transition: background-color 0.3s ease-in-out;
 }
 
 .package-card-booking button:hover,
 .send-enquiry-final:hover {
-  background-color: var(--hover-color);
-  color: white;
+  background-color: white;
+  color: var(--active-color);
 }
 
 .accordion-item h5 {
