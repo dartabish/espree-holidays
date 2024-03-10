@@ -1,54 +1,6 @@
 const longTreksContainer = document.querySelector('.long-trek-container');
 const softTreksContainer = document.querySelector('.soft-trek-container');
 
-const trekSlides = [
-  {
-    id: 1,
-    content: 'Slide 1',
-    img: 'https://images.unsplash.com/photo-1601627950339-93677407ba0c?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  },
-  {
-    id: 2,
-    content: 'Slide 2',
-    img: 'https://images.unsplash.com/photo-1484264883846-eb04404af310?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  },
-  {
-    id: 3,
-    content: 'Slide 3',
-    img: 'https://images.unsplash.com/photo-1676441696009-d6c02ff4b5d6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  },
-  {
-    id: 4,
-    content: 'Slide 1',
-    img: 'https://images.unsplash.com/photo-1601627950339-93677407ba0c?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  },
-  {
-    id: 5,
-    content: 'Slide 2',
-    img: 'https://images.unsplash.com/photo-1484264883846-eb04404af310?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  },
-  {
-    id: 6,
-    content: 'Slide 3',
-    img: 'https://images.unsplash.com/photo-1676441696009-d6c02ff4b5d6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  },
-  {
-    id: 4,
-    content: 'Slide 1',
-    img: 'https://images.unsplash.com/photo-1601627950339-93677407ba0c?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  },
-  {
-    id: 5,
-    content: 'Slide 2',
-    img: 'https://images.unsplash.com/photo-1484264883846-eb04404af310?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  },
-  {
-    id: 6,
-    content: 'Slide 3',
-    img: 'https://images.unsplash.com/photo-1676441696009-d6c02ff4b5d6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  },
-];
-
 const longTreks = [
   {
     id: 'long-trek-1',
@@ -585,7 +537,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     breakpoints: {
       800: {
-        slidesPerView: 3,
+        slidesPerView: 2,
       },
     },
     navigation: {
