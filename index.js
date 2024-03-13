@@ -1,4 +1,60 @@
 import PhotoSwipeLightbox from './photoswipe/dist/photoswipe-lightbox.esm.js';
+document.addEventListener('DOMContentLoaded', () => {
+  const galleryItems = [
+    { path: './assets/gallery/gallery-1.jpeg', width: 2048, height: 1360 },
+    { path: './assets/gallery/gallery-2.jpg', width: 4608, height: 3456 },
+    { path: './assets/gallery/gallery-3.jpg', width: 4608, height: 3456 },
+    { path: './assets/gallery/gallery-4.jpg', width: 4608, height: 3456 },
+    { path: './assets/gallery/gallery-5.jpg', width: 3455, height: 2698 },
+    { path: './assets/gallery/gallery-6.jpg', width: 4608, height: 3456 },
+    { path: './assets/gallery/gallery-7.jpg', width: 2592, height: 1944 },
+    { path: './assets/gallery/gallery-8.jpg', width: 4608, height: 3456 },
+    { path: './assets/gallery/gallery-9.jpg', width: 4608, height: 3456 },
+    { path: './assets/gallery/gallery-10.jpg', width: 4144, height: 1968 },
+    { path: './assets/gallery/gallery-11.jpg', width: 4144, height: 1968 },
+    { path: './assets/gallery/gallery-13.jpg', width: 4608, height: 3456 },
+    { path: './assets/gallery/gallery-14.jpg', width: 4608, height: 3456 },
+    { path: './assets/gallery/gallery-15.jpg', width: 4608, height: 3456 },
+    { path: './assets/gallery/gallery-16.jpg', width: 4608, height: 3456 },
+    { path: './assets/gallery/gallery-18.jpg', width: 4608, height: 3456 },
+    { path: './assets/gallery/gallery-19.jpg', width: 4608, height: 3456 },
+    { path: './assets/gallery/gallery-20.jpg', width: 4608, height: 3456 },
+    { path: './assets/gallery/gallery-21.jpg', width: 3456, height: 4608 },
+    { path: './assets/gallery/gallery-22.jpg', width: 4608, height: 3456 },
+    { path: './assets/gallery/gallery-23.jpg', width: 4608, height: 3456 },
+    { path: './assets/gallery/gallery-24.jpg', width: 4608, height: 3456 },
+    { path: './assets/gallery/gallery-25.jpg', width: 4608, height: 3456 },
+    { path: './assets/gallery/gallery-26.jpg', width: 4608, height: 3456 },
+    { path: './assets/gallery/gallery-27.jpg', width: 4608, height: 3456 },
+    { path: './assets/gallery/gallery-28.jpg', width: 4608, height: 3456 },
+    { path: './assets/gallery/gallery-29.jpg', width: 4608, height: 3456 },
+    { path: './assets/gallery/gallery-30.jpg', width: 4608, height: 3456 },
+    { path: './assets/gallery/gallery-32.jpg', width: 4608, height: 3456 },
+    { path: './assets/gallery/gallery-33.jpg', width: 4608, height: 3456 },
+    { path: './assets/gallery/gallery-34.jpg', width: 4608, height: 3456 },
+  ];
+
+  function createGalleryItems(items) {
+    const galleryContainer = document.getElementById('gallery-wrapper');
+    items.forEach(item => {
+      const slideDiv = document.createElement('div');
+      slideDiv.className = 'swiper-slide gallery-slide';
+      slideDiv.innerHTML = `
+              <a
+                href="${item.path}"
+                data-pswp-width="${item.width}"
+                data-pswp-height="${item.height}"
+                data-cropped="true"
+                target="_blank"
+              >
+                <img src="${item.path}" alt="Large Image" loading="lazy"/>
+              </a>
+    `;
+      galleryContainer.appendChild(slideDiv);
+    });
+  }
+  createGalleryItems(galleryItems);
+});
 
 const headerSwiper = new Swiper('.header-swiper', {
   loop: true,
@@ -36,7 +92,6 @@ const tdSwiper = new Swiper('.td-swiper', {
 });
 
 const backToTopBtn = document.getElementById('myBtn');
-
 /* Back to top button toggle functionality */
 function scrollFunction() {
   if (
