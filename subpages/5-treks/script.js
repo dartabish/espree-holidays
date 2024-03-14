@@ -467,7 +467,7 @@ const softTreks = [
   {
     id: 'soft-trek-3',
     title: 'Mamneth Top Trek',
-    img: 'https://scontent.fixj1-1.fna.fbcdn.net/v/t1.6435-9/67283831_2420233871371242_6201542457386074112_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=05BamEAwgmUAX9d_K7-&_nc_ht=scontent.fixj1-1.fna&oh=00_AfA8yGzJFMaC01zmW11NGxrw86uvQs4ocxNihEW0Qo7B2Q&oe=66138BB5',
+    img: '../../assets/trek/mamneth.jpeg',
     details: {
       totalDistance: '4',
       duration: {

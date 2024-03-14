@@ -1,4 +1,5 @@
 import PhotoSwipeLightbox from './photoswipe/dist/photoswipe-lightbox.esm.js';
+
 document.addEventListener('DOMContentLoaded', () => {
   const galleryItems = [
     { path: './assets/gallery/gallery-1.jpeg', width: 2048, height: 1360 },
@@ -54,6 +55,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
   createGalleryItems(galleryItems);
+
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: '#my-gallery',
+    children: 'a',
+    zoom: false,
+    tapAction: 'close',
+    showHideAnimationType: 'zoom',
+    closeAnimationDuration: '0000',
+    loop: false,
+
+    pswpModule: () => import('./photoswipe/dist/photoswipe.esm.js'),
+  });
+  lightbox.init();
 });
 
 const headerSwiper = new Swiper('.header-swiper', {
@@ -63,11 +77,12 @@ const headerSwiper = new Swiper('.header-swiper', {
     nextEl: '.header-button-next',
     prevEl: '.header-button-prev',
   },
-  /* autoplay: {
+  autoplay: {
     delay: 2500,
-  }, */
-  speed: 900,
+  },
+  speed: 1400,
   effect: 'fade',
+  crossFade: 'true',
 });
 
 const tdSwiper = new Swiper('.td-swiper', {
@@ -91,45 +106,7 @@ const tdSwiper = new Swiper('.td-swiper', {
   },
 });
 
-const backToTopBtn = document.getElementById('myBtn');
-/* Back to top button toggle functionality */
-function scrollFunction() {
-  if (
-    document.body.scrollTop > 1000 ||
-    document.documentElement.scrollTop > 1000
-  ) {
-    backToTopBtn.style.opacity = '1';
-  } else {
-    backToTopBtn.style.opacity = '0';
-  }
-}
-
-/* Back To Top button functionality */ backToTopBtn.addEventListener(
-  'click',
-  () => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
-);
-
-window.onscroll = function () {
-  scrollFunction();
-};
-
-const lightbox = new PhotoSwipeLightbox({
-  gallery: '#my-gallery',
-  children: 'a',
-  zoom: false,
-  tapAction: 'close',
-  showHideAnimationType: 'zoom',
-  closeAnimationDuration: '0000',
-  loop: false,
-
-  pswpModule: () => import('./photoswipe/dist/photoswipe.esm.js'),
-});
-lightbox.init();
-
-var gallerySwiper = new Swiper('.gallery-swiper', {
+const gallerySwiper = new Swiper('.gallery-swiper', {
   rewind: true,
   navigation: {
     nextEl: '.gallery-button-next',
@@ -152,6 +129,27 @@ var gallerySwiper = new Swiper('.gallery-swiper', {
     },
   },
 });
+
+const backToTopBtn = document.getElementById('myBtn');
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 1000 ||
+    document.documentElement.scrollTop > 1000
+  ) {
+    backToTopBtn.style.opacity = '1';
+  } else {
+    backToTopBtn.style.opacity = '0';
+  }
+}
+
+backToTopBtn.addEventListener('click', () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+});
+
+window.onscroll = function () {
+  scrollFunction();
+};
 
 function updateDataAttribute() {
   const element = document.querySelector('.home-link');

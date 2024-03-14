@@ -40,158 +40,6 @@ const tourPackages = [
   },
   {
     id: 2,
-    title: '5 Day Kashmir Package',
-    img: '../../assets/packages/package-2.jpg',
-    details: {
-      duration: {
-        days: 5,
-        nights: 4,
-      },
-      tourPlan: {
-        day1: {
-          id: 1,
-          title: 'Day 1: Arrival in Srinagar ',
-          description:
-            'Upon arrival at the airport, experience our prompt transfer and check-in at the airport. Enjoy the rest of the day at leisure. The evening is reserved for Shikara ride in the Dal lake. Overnight stay at the Houseboat/Hotel ',
-        },
-        day2: {
-          id: 2,
-          title:
-            'Day 2: Srinagar to Gulmarg (Altitude: 2650 mtrs | Distance: 52 kms | Duration: 2-3 hrs) ',
-          description:
-            'After breakfast, begin your trip to Gulmarg and spend the day sightseeing. You can take the Gondola cable car to Khilanmarg or Apharwat Snow point. Overnight stay at the Hotel in Gulmarg ',
-        },
-        day3: {
-          id: 3,
-          title: 'Day 3: Pahalgam (Distance: 98 kms | Duration: 3-4 hrs ',
-          description:
-            'After breakfast at the hotel, leave for Pahalgam. Enjoy Chandanwari, Aru, Betaab Valley and the Lidder river that flows through Pahalgam. Overnight stay at the Hotel ',
-        },
-        day4: {
-          id: 4,
-          title:
-            'Day 4: Pahalgam to Srinagar (Distance: 96 kms | Duration: 2-3 hrs) ',
-          description:
-            'After breakfast, leave for Srinagar and check-in to your hotel. Time for local Srinagar sightseeing. Enjoy shopping at Kashmiri craft and art stores. Overnight stay at the Hotel ',
-        },
-        day5: {
-          id: 5,
-          title: 'Day 5: Departure ',
-          description:
-            'The tour ends post breakfast with transfer to Srinagar airport ',
-        },
-      },
-    },
-  },
-  {
-    id: 3,
-    title: '6 Day Kashmir Package',
-    img: '../../assets/packages/package-3.jpg',
-    details: {
-      duration: {
-        days: 6,
-        nights: 5,
-      },
-      tourPlan: {
-        day1: {
-          id: 1,
-          title: 'Day 1: Arrival in Srinagar ',
-          description:
-            'Meet our representative and take a transfer to the hotel. Spend the afternoon relaxing and enjoy the scenic view of Zabarwan mountain range around the Dal lake. Enjoy the comfortable overnight stay in the houseboat.',
-        },
-        day2: {
-          id: 2,
-          title: 'Day 2: Srinagar Local Sightseeing ',
-          description:
-            'After breakfast visit the famous Mughal gardens, Cheshma Shahi(Royal Spring), Nishat Bagh (Garden of Pleasure), Shalimar Bagh (Abode of Love). These are all located around the Dal lake. Also visit the Shankaracharya temple on the hillock and enjoy the Srinagar city view. Stay overnight at the hotel ',
-        },
-        day3: {
-          id: 3,
-          title: 'Day 3: Srinagar-Sonamarg (Distance: 80 kms) ',
-          description:
-            'After breakfast, proceed for a day trip to Sonamarg (golden meadow). Enjoy walking or take a pony ride towards the Thajiwas glacier. Overnight stay at Srinagar ',
-        },
-        day4: {
-          id: 4,
-          title:
-            'Day 4: Srinagar-Gulmarg: (Distance: 52 kms | Duration: 2 hrs)  ',
-          description:
-            'After breakfast, start proceeding towards Gulmarg(meadow of flowers). Enjoy the sightseeing and the Gondola cable car ride to Khilanmarg or Apharwat. Overnight stay at the hotel ',
-        },
-        day5: {
-          id: 5,
-          title: 'Day 5: Gulmarg ',
-          description:
-            'After breakfast enjoy the full day at ease. Stay overnight at the hotel ',
-        },
-        day6: {
-          id: 6,
-          title: 'Day 6: Departure ',
-          description:
-            'After breakfast, start your trip back to Srinagar airport for onward journey ',
-        },
-      },
-    },
-  },
-  {
-    id: 4,
-    title: '7 Day Kashmir Package',
-    img: '../../assets/packages/package-4.jpg',
-    details: {
-      duration: {
-        days: 7,
-        nights: 6,
-      },
-      tourPlan: {
-        day1: {
-          id: 1,
-          title: 'Day 1: Arrival in Srinagar ',
-          description:
-            'Arrive at the airport and experience our prompt transfer and check-in at the houseboat. Afternoon is reserved for a Shikara ride in the Dal lake (1 hr ride with 4 pax on one shikara). Overnight stay at the houseboat ',
-        },
-        day2: {
-          id: 2,
-          title:
-            'Day 2: Srinagar-Pahalgam (Distance: 90 kms | Duration: 3 hrs) ',
-          description:
-            'After breakfast proceed to Pahalgam. On the way, visit the Avantipura ruins and enjoy the saffron fields. Overnight stay at the hotel ',
-        },
-        day3: {
-          id: 3,
-          title: 'Day 3: Pahalgam ',
-          description:
-            'After breakfast head for sightseeings in Pahalgam. Overnight stay at the Hotel ',
-        },
-        day4: {
-          id: 4,
-          title:
-            'Day 4: Pahalgam-Gulmarg(Distance: 98 kms |Duration: 3-4 hrs) ',
-          description:
-            'After breakfast, proceed to Gulmarg. Enjoy local sightseeing and take the Gondola ride to Khilanmarg or/and Apharwat. In the evening, begin your return to Srinagar. Overnight stay at the Hotel ',
-        },
-        day5: {
-          id: 5,
-          title: 'Day 5: Sonamarg (Distance: 80 kms | Duration 2:30 hrs) ',
-          description:
-            'After breakfast, begin your day trip to Sonamarg. Enjoy the golden meadows and walk to Thajiwas Glacier. In the evening,return to Srinagar. Overnight stay at the Hotel ',
-        },
-        day6: {
-          id: 6,
-          title: 'Day 6: Srinagar',
-          description:
-            'After breakfast, proceed for sightseeing of the Srinagar city. Visit the beautiful Mughal gardens and Hazratbal mosque. Overnight stay at the hotel ',
-        },
-        day7: {
-          id: 7,
-          title: 'Day 7: Departure ',
-          description:
-            'After breakfast, start your trip back to Srinagar airport for onward journey ',
-        },
-      },
-    },
-  },
-  {
-    id: 5,
     title: '4-Day Ladakh Package',
     img: '../../assets/packages/package-5.jpg',
     details: {
@@ -250,7 +98,102 @@ const tourPackages = [
     },
   },
   {
-    id: 6,
+    id: 3,
+    title: '5 Day Kashmir Package',
+    img: '../../assets/packages/package-2.jpg',
+    details: {
+      duration: {
+        days: 5,
+        nights: 4,
+      },
+      tourPlan: {
+        day1: {
+          id: 1,
+          title: 'Day 1: Arrival in Srinagar ',
+          description:
+            'Upon arrival at the airport, experience our prompt transfer and check-in at the airport. Enjoy the rest of the day at leisure. The evening is reserved for Shikara ride in the Dal lake. Overnight stay at the Houseboat/Hotel ',
+        },
+        day2: {
+          id: 2,
+          title:
+            'Day 2: Srinagar to Gulmarg (Altitude: 2650 mtrs | Distance: 52 kms | Duration: 2-3 hrs) ',
+          description:
+            'After breakfast, begin your trip to Gulmarg and spend the day sightseeing. You can take the Gondola cable car to Khilanmarg or Apharwat Snow point. Overnight stay at the Hotel in Gulmarg ',
+        },
+        day3: {
+          id: 3,
+          title: 'Day 3: Pahalgam (Distance: 98 kms | Duration: 3-4 hrs ',
+          description:
+            'After breakfast at the hotel, leave for Pahalgam. Enjoy Chandanwari, Aru, Betaab Valley and the Lidder river that flows through Pahalgam. Overnight stay at the Hotel ',
+        },
+        day4: {
+          id: 4,
+          title:
+            'Day 4: Pahalgam to Srinagar (Distance: 96 kms | Duration: 2-3 hrs) ',
+          description:
+            'After breakfast, leave for Srinagar and check-in to your hotel. Time for local Srinagar sightseeing. Enjoy shopping at Kashmiri craft and art stores. Overnight stay at the Hotel ',
+        },
+        day5: {
+          id: 5,
+          title: 'Day 5: Departure ',
+          description:
+            'The tour ends post breakfast with transfer to Srinagar airport ',
+        },
+      },
+    },
+  },
+  {
+    id: 4,
+    title: '6 Day Kashmir Package',
+    img: '../../assets/packages/package-3.jpg',
+    details: {
+      duration: {
+        days: 6,
+        nights: 5,
+      },
+      tourPlan: {
+        day1: {
+          id: 1,
+          title: 'Day 1: Arrival in Srinagar ',
+          description:
+            'Meet our representative and take a transfer to the hotel. Spend the afternoon relaxing and enjoy the scenic view of Zabarwan mountain range around the Dal lake. Enjoy the comfortable overnight stay in the houseboat.',
+        },
+        day2: {
+          id: 2,
+          title: 'Day 2: Srinagar Local Sightseeing ',
+          description:
+            'After breakfast visit the famous Mughal gardens, Cheshma Shahi(Royal Spring), Nishat Bagh (Garden of Pleasure), Shalimar Bagh (Abode of Love). These are all located around the Dal lake. Also visit the Shankaracharya temple on the hillock and enjoy the Srinagar city view. Stay overnight at the hotel ',
+        },
+        day3: {
+          id: 3,
+          title: 'Day 3: Srinagar-Sonamarg (Distance: 80 kms) ',
+          description:
+            'After breakfast, proceed for a day trip to Sonamarg (golden meadow). Enjoy walking or take a pony ride towards the Thajiwas glacier. Overnight stay at Srinagar ',
+        },
+        day4: {
+          id: 4,
+          title:
+            'Day 4: Srinagar-Gulmarg: (Distance: 52 kms | Duration: 2 hrs)  ',
+          description:
+            'After breakfast, start proceeding towards Gulmarg(meadow of flowers). Enjoy the sightseeing and the Gondola cable car ride to Khilanmarg or Apharwat. Overnight stay at the hotel ',
+        },
+        day5: {
+          id: 5,
+          title: 'Day 5: Gulmarg ',
+          description:
+            'After breakfast enjoy the full day at ease. Stay overnight at the hotel ',
+        },
+        day6: {
+          id: 6,
+          title: 'Day 6: Departure ',
+          description:
+            'After breakfast, start your trip back to Srinagar airport for onward journey ',
+        },
+      },
+    },
+  },
+  {
+    id: 5,
     title: `6 Day Ladakh Package`,
     img: '../../assets/packages/package-6.jpg',
     details: {
@@ -324,6 +267,63 @@ const tourPackages = [
           <em>Basgo Palace</em> : Visit the ruins of Basgo Palace, known for its historical significance and architecture.
           <br>
           <em>Return to Leh</em> : Spend your final evening in Leh, wrapping up your trip.`,
+        },
+      },
+    },
+  },
+  {
+    id: 6,
+    title: '7 Day Kashmir Package',
+    img: '../../assets/packages/package-4.jpg',
+    details: {
+      duration: {
+        days: 7,
+        nights: 6,
+      },
+      tourPlan: {
+        day1: {
+          id: 1,
+          title: 'Day 1: Arrival in Srinagar ',
+          description:
+            'Arrive at the airport and experience our prompt transfer and check-in at the houseboat. Afternoon is reserved for a Shikara ride in the Dal lake (1 hr ride with 4 pax on one shikara). Overnight stay at the houseboat ',
+        },
+        day2: {
+          id: 2,
+          title:
+            'Day 2: Srinagar-Pahalgam (Distance: 90 kms | Duration: 3 hrs) ',
+          description:
+            'After breakfast proceed to Pahalgam. On the way, visit the Avantipura ruins and enjoy the saffron fields. Overnight stay at the hotel ',
+        },
+        day3: {
+          id: 3,
+          title: 'Day 3: Pahalgam ',
+          description:
+            'After breakfast head for sightseeings in Pahalgam. Overnight stay at the Hotel ',
+        },
+        day4: {
+          id: 4,
+          title:
+            'Day 4: Pahalgam-Gulmarg(Distance: 98 kms |Duration: 3-4 hrs) ',
+          description:
+            'After breakfast, proceed to Gulmarg. Enjoy local sightseeing and take the Gondola ride to Khilanmarg or/and Apharwat. In the evening, begin your return to Srinagar. Overnight stay at the Hotel ',
+        },
+        day5: {
+          id: 5,
+          title: 'Day 5: Sonamarg (Distance: 80 kms | Duration 2:30 hrs) ',
+          description:
+            'After breakfast, begin your day trip to Sonamarg. Enjoy the golden meadows and walk to Thajiwas Glacier. In the evening,return to Srinagar. Overnight stay at the Hotel ',
+        },
+        day6: {
+          id: 6,
+          title: 'Day 6: Srinagar',
+          description:
+            'After breakfast, proceed for sightseeing of the Srinagar city. Visit the beautiful Mughal gardens and Hazratbal mosque. Overnight stay at the hotel ',
+        },
+        day7: {
+          id: 7,
+          title: 'Day 7: Departure ',
+          description:
+            'After breakfast, start your trip back to Srinagar airport for onward journey ',
         },
       },
     },

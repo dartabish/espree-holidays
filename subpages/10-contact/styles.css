@@ -1,19 +1,19 @@
 .contact-banner {
-  background-image: url('../../assets/contact-banner.jpg');
+  background-image: url('https://images.unsplash.com/photo-1587560699334-bea93391dcef?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   background-position: center;
   background-size: cover;
-  height: 50vh;
+  height: 60vh;
   position: relative;
 }
 
 .contact-banner::after {
-  content: ''; /* Required for ::after to work */
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .contact-banner h1 {
@@ -22,6 +22,7 @@
   position: absolute;
   z-index: 1;
   padding: 0 20px;
+  letter-spacing: 4px;
 }
 
 .contact-detail {
