@@ -73,36 +73,38 @@ const scootyCollection = [
   },
 ];
 
-displayVehicles(carCollection, carsContainer);
+document.addEventListener('DOMContentLoaded', () => {
+  displayVehicles(carCollection, carsContainer);
 
-vehicleBtns = document.querySelectorAll('.vehicle-btn');
-vehicleBtns.forEach(vehicleBtn => {
-  vehicleBtn.addEventListener('click', e => {
-    const vehicleCategoriesID = ['cars', 'bikes', 'scooties'];
-    vehicleCategoriesID.forEach(vehicleCategoryID => {
-      if (e.target.id === `${vehicleCategoryID}-btn`) {
-        document.querySelector(`.${vehicleCategoryID}-container`).innerHTML =
-          '';
-        document.querySelector(
-          `.${vehicleCategoryID}-container`
-        ).style.display = 'flex';
+  vehicleBtns = document.querySelectorAll('.vehicle-btn');
+  vehicleBtns.forEach(vehicleBtn => {
+    vehicleBtn.addEventListener('click', e => {
+      const vehicleCategoriesID = ['cars', 'bikes', 'scooties'];
+      vehicleCategoriesID.forEach(vehicleCategoryID => {
+        if (e.target.id === `${vehicleCategoryID}-btn`) {
+          document.querySelector(`.${vehicleCategoryID}-container`).innerHTML =
+            '';
+          document.querySelector(
+            `.${vehicleCategoryID}-container`
+          ).style.display = 'flex';
 
-        switch (vehicleCategoryID) {
-          case 'cars':
-            displayVehicles(carCollection, carsContainer);
-            break;
-          case 'bikes':
-            displayVehicles(bikeCollection, bikesContainer);
-            break;
-          case 'scooties':
-            displayVehicles(scootyCollection, scootiesContainer);
-            break;
+          switch (vehicleCategoryID) {
+            case 'cars':
+              displayVehicles(carCollection, carsContainer);
+              break;
+            case 'bikes':
+              displayVehicles(bikeCollection, bikesContainer);
+              break;
+            case 'scooties':
+              displayVehicles(scootyCollection, scootiesContainer);
+              break;
+          }
+        } else {
+          document.querySelector(
+            `.${vehicleCategoryID}-container`
+          ).style.display = 'none';
         }
-      } else {
-        document.querySelector(
-          `.${vehicleCategoryID}-container`
-        ).style.display = 'none';
-      }
+      });
     });
   });
 });

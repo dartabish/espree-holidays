@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { path: './assets/gallery/gallery-20.jpg', width: 4608, height: 3456 },
     { path: './assets/gallery/gallery-21.jpg', width: 3456, height: 4608 },
     { path: './assets/gallery/gallery-22.jpg', width: 4608, height: 3456 },
-    { path: './assets/gallery/gallery-23.jpg', width: 4608, height: 3456 },
+
     { path: './assets/gallery/gallery-24.jpg', width: 4608, height: 3456 },
     { path: './assets/gallery/gallery-25.jpg', width: 4608, height: 3456 },
     { path: './assets/gallery/gallery-26.jpg', width: 4608, height: 3456 },

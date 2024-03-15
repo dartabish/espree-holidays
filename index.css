@@ -752,6 +752,7 @@ footer {
   padding-left: 10px;
   padding-right: 10px;
   gap: 3rem;
+  min-height: 100vh;
 }
 
 .package-card {
