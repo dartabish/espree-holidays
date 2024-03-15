@@ -318,6 +318,7 @@ bikeTours.forEach(tour => {
                   name="_subject"
                   value="Bike Tour Enquiry!"
                 />
+                <input type="hidden" name="_next" value="https://espreeholidays.com/thanks.html">
                 <input type="hidden" name="_captcha" value="false" />
                         <div class="form-floating" >
                             <input

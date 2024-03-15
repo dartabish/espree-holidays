@@ -705,6 +705,7 @@ function displayTreks(object, container) {
                 method="POST" id="bookingForm${
                   trek.id
                 }" class="booking-form" data-trek-id="${trek.id}">
+                <input type="hidden" name="_next" value="https://espreeholidays.com/thanks.html">
                 <input
                   type="hidden"
                   name="_subject"

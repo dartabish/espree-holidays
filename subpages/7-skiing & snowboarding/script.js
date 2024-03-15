@@ -211,6 +211,7 @@ courses.forEach(course => {
                 }" class="enquiry-form" data-package-id="${
     course.id
   }"  autocomplete="on">
+                <input type="hidden" name="_next" value="https://espreeholidays.com/thanks.html">
                 <input type="hidden" name="_subject" value="Skiing & Snowboarding Enquiry!"/>
                 <input type="hidden" name="_captcha" value="false" />
                         <div class="form-floating" >

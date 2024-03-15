@@ -156,6 +156,7 @@ function displayVehicles(object, container) {
               <div class="booking-details">
               </div>
               <form  action="https://formsubmit.co/info@espreeholidays.com" method="POST" id="bookingForm${vehicle.id}" class="booking-form" data-vehicle-id="${vehicle.id}"  method="POST">
+              <input type="hidden" name="_next" value="https://espreeholidays.com/thanks.html">
               <input type="hidden" name="_subject" value="Vehicle Rentals Enquiry!">
               <input type="hidden" name="_captcha" value="false">
               

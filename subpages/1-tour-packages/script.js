@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 1,
       title: '4 Day Kashmir Package',
-      img: '../../../assets/packages/package-1.jpg',
+      img: '../../assets/packages/package-1.jpg',
       details: {
         duration: {
           days: 4,
@@ -651,7 +651,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }" class="enquiry-form" data-package-id="${
       tourPackage.id
     }"  autocomplete="on">
-                        <input type="hidden" name="_next" value="https://dartabish.github.io/weather/thanks.html">
+                        <input type="hidden" name="_next" value="https://espreeholidays.com/thanks.html">
                         <input type="hidden" name="_template" value="box">
                         <input type="hidden" name="_subject" value="Tour Package Enquiry!">
                         <input type="hidden" name="_captcha" value="false">
