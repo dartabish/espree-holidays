@@ -529,17 +529,9 @@ trekTypeBtns.forEach(trekBtn => {
 document.addEventListener('DOMContentLoaded', function () {
   var trekSwiper = new Swiper('.trek-swiper', {
     grabCursor: true,
-    rewind: true,
-
     speed: 1000,
     spaceBetween: 20,
     slidesPerView: 1,
-
-    breakpoints: {
-      800: {
-        slidesPerView: 2,
-      },
-    },
     navigation: {
       nextEl: '.trek-button-next',
       prevEl: '.trek-button-prev',

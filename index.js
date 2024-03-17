@@ -107,7 +107,6 @@ const tdSwiper = new Swiper('.td-swiper', {
 });
 
 const gallerySwiper = new Swiper('.gallery-swiper', {
-  rewind: true,
   navigation: {
     nextEl: '.gallery-button-next',
     prevEl: '.gallery-button-prev',
