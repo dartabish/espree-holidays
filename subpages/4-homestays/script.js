@@ -88,13 +88,13 @@ document
     };
 
     emailjs
-      .send('service_69esjw8', 'template_897f1hw', transformedFormData)
+      .send('service_hqpvsud', 'template_3jvbjoa', transformedFormData)
       .then(
         response => {
-          window.location.href = 'http://127.0.0.1:5500/thanks.html';
+          window.location.href = '../../thanks.html';
         },
         error => {
-          window.alert('Error ! Please try to submit the form again.');
+          window.alert('Error ! Please try to contact us via mail or phone.');
         }
       );
   });
