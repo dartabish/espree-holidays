@@ -30,6 +30,10 @@ contactForm = document.getElementById('contact-form');
 
 contactForm.addEventListener('submit', function (e) {
   e.preventDefault();
+  const submitBtn = document.getElementById('btn-submit');
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = '<i class="fa fa-spinner fa-spin"></i>';
+
   const name = document.getElementById('floatingFullName').value;
   const email = document.getElementById('floatingEmail').value;
   const messageSubject = document.getElementById('floatingSubject').value;
@@ -60,6 +64,8 @@ contactForm.addEventListener('submit', function (e) {
       window.location.href = '../../thanks.html';
     },
     error => {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = 'Submit Now';
       window.alert('Error ! Please try to contact us via mail or phone.');
     }
   );

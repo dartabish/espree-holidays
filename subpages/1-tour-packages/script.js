@@ -650,7 +650,7 @@ document.addEventListener('DOMContentLoaded', () => {
                       tourPackage.id
                     }" class="enquiry-form" data-package-id="${
       tourPackage.id
-    }"  autocomplete="on">
+    }" autocomplete="on">
                         <div class="form-floating" >
                             <input
                             readonly
@@ -733,7 +733,9 @@ document.addEventListener('DOMContentLoaded', () => {
                                       tourPackage.id
                                     }">Message</label>
                         </div>
-                                <button type="submit" class="send-enquiry-final w-100 mt-4">Submit Now
+                                <button id=btn-${
+                                  tourPackage.id
+                                } type="submit" class="send-enquiry-final w-100 mt-4">Submit Now
                                 </button>
                             </form>
                         </div>
@@ -751,6 +753,10 @@ cardContainer.addEventListener('submit', function (event) {
   if (event.target.classList.contains('enquiry-form')) {
     event.preventDefault();
 
+    let packageId = event.target.getAttribute('data-package-id');
+    const submitBtn = document.getElementById(`btn-${packageId}`);
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fa fa-spinner fa-spin"></i>';
     (function () {
       emailjs.init({
         publicKey: 'IWHJXL5_pOB5VYAl-',
@@ -758,7 +764,6 @@ cardContainer.addEventListener('submit', function (event) {
     })();
 
     // Extract form data
-    let packageId = event.target.getAttribute('data-package-id');
     let formData = {
       selectedPackage: event.target.querySelector(
         `#floatingPackage${packageId}`
@@ -780,18 +785,13 @@ cardContainer.addEventListener('submit', function (event) {
       messageBody: `
     Selected Package: ${selectedPackage}
     <br>
-    <br>
     Name : ${fullName}
-    <br>
     <br>
     Email: ${email}
     <br>
-    <br>
     Date of Arrival: ${startDate}
     <br>
-    <br>
     Phone: ${phone}
-    <br>
     <br>
     Message: ${message}
     `,
@@ -804,6 +804,8 @@ cardContainer.addEventListener('submit', function (event) {
           window.location.href = '../../thanks.html';
         },
         error => {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = 'Submit Now';
           window.alert('Error ! Please try to contact us via mail or phone.');
         }
       );

@@ -756,7 +756,9 @@ function displayTreks(object, container) {
                     ></textarea>
                     <label for="floatingMessage${trek.id}">Message</label>
                  </div>
-               <button id="submitForm" type="submit" class="send-enquiry enquiry-btn w-100 mt-4">Submit Now</button>
+               <button id="btn-${
+                 trek.id
+               }" type="submit" class="send-enquiry enquiry-btn w-100 mt-4">Submit Now</button>
              </form>
                         </div>
                     </div>
@@ -941,7 +943,7 @@ function displaySoftTreks(object, container) {
                     ></textarea>
                     <label for="floatingMessage${trek.id}">Message</label>
                  </div>
-               <button id="submitForm" type="submit" class="send-enquiry enquiry-btn w-100 mt-4">Submit Now</button>
+               <button id="btn-${trek.id}" type="submit" class="send-enquiry enquiry-btn w-100 mt-4">Submit Now</button>
              </form>
                         </div>
                     </div>
@@ -961,6 +963,9 @@ function displaySoftTreks(object, container) {
 function handleFormSubmission(event) {
   event.preventDefault();
   let trekId = event.target.getAttribute('data-trek-id');
+  const submitBtn = document.getElementById(`btn-${trekId}`);
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = '<i class="fa fa-spinner fa-spin"></i>';
 
   let formData = {
     trek: event.target.querySelector(`#floatingTrek${trekId}`).value,
@@ -999,6 +1004,8 @@ function handleFormSubmission(event) {
       window.location.href = '../../thanks.html';
     },
     error => {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = 'Submit Now';
       window.alert('Error ! Please try to contact us via mail or phone.');
     }
   );

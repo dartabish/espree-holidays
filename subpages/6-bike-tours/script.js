@@ -401,7 +401,9 @@ bikeTours.forEach(tour => {
                                       tour.id
                                     }">Message</label>
                         </div>
-                                <button type="submit" class="send-enquiry-final w-100 mt-4">Submit Now
+                                <button id=btn-${
+                                  tour.id
+                                } type="submit" class="send-enquiry-final w-100 mt-4">Submit Now
                                 </button>
                             </form>
                         </div>
@@ -425,6 +427,9 @@ packageCardsContainer.addEventListener('submit', function (event) {
 
     // Extract form data
     let packageId = event.target.getAttribute('data-package-id');
+    const submitBtn = document.getElementById(`btn-${packageId}`);
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fa fa-spinner fa-spin"></i>';
     let formData = {
       selectedPackage: event.target.querySelector(
         `#floatingPackage${packageId}`
@@ -465,6 +470,8 @@ packageCardsContainer.addEventListener('submit', function (event) {
           window.location.href = '../../thanks.html';
         },
         error => {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = 'Submit Now';
           window.alert('Error ! Please try to contact us via mail or phone.');
         }
       );

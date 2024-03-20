@@ -888,6 +888,13 @@ footer {
   color: var(--active-color);
 }
 
+.send-enquiry-final:active,
+.enquiry-btn:active,
+.send-message:active {
+  color: white;
+  background-color: var(--active-color);
+}
+
 .accordion-item h5 {
   color: var(--primary-dark);
 }

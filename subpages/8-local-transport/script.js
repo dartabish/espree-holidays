@@ -144,7 +144,7 @@ function displayVehicles() {
                     ></textarea>
                     <label for="floatingMessage${vehicle.id}">Message</label>
                  </div>
-               <button id="submitForm" type="submit" class="send-enquiry enquiry-btn w-100 mt-4">Submit Now</button>
+               <button id="btn-${vehicle.id}" type="submit" class="send-enquiry enquiry-btn w-100 mt-4">Submit Now</button>
              </form>
            
           </div>
@@ -167,6 +167,9 @@ displayVehicles();
 function handleFormSubmission(event) {
   event.preventDefault();
   let vehicleId = event.target.getAttribute('data-vehicle-id');
+  const submitBtn = document.getElementById(`btn-${vehicleId}`);
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = '<i class="fa fa-spinner fa-spin"></i>';
 
   let formData = {
     vehicle: event.target.querySelector(`#floatingVehicle${vehicleId}`).value,
@@ -200,6 +203,8 @@ function handleFormSubmission(event) {
       window.location.href = '../../thanks.html';
     },
     error => {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = 'Submit Now';
       window.alert('Error ! Please try to contact us via mail or phone.');
     }
   );

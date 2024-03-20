@@ -31,6 +31,10 @@ document
   .addEventListener('submit', function (e) {
     e.preventDefault();
 
+    const submitBtn = document.getElementById('submit-btn-lg');
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fa fa-spinner fa-spin"></i>';
+
     const name = document.getElementById('floatingFullName').value;
     const email = document.getElementById('floatingEmail').value;
     const startDate = document.getElementById('floatingStartDate').value;
@@ -62,6 +66,8 @@ document
           window.location.href = '../../thanks.html';
         },
         error => {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = 'Submit Now';
           window.alert('Error ! Please try to contact us via mail or phone.');
         }
       );
@@ -72,6 +78,10 @@ document
   .addEventListener('submit', function (e) {
     e.preventDefault();
 
+    const submitBtn = document.getElementById('submit-btn-sm');
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fa fa-spinner fa-spin"></i>';
+
     const name = document.getElementById('floatingFullNameSm').value;
     const email = document.getElementById('floatingEmailSm').value;
     const startDate = document.getElementById('floatingStartDateSm').value;
@@ -80,11 +90,21 @@ document
 
     let transformedFormData = {
       enquiryType: 'Homestays',
-      fullName: name,
-      email: email,
-      phone: phone,
-      startDate: startDate,
-      message: message,
+      messageBody: `
+    Name : ${name}
+    <br>
+    <br>
+    Email: ${email}
+    <br>
+    <br>
+    Date of Arrival: ${startDate}
+    <br>
+    <br>
+    Phone: ${phone}
+    <br>
+    <br>
+    Message: ${message}
+    `,
     };
 
     emailjs
@@ -94,7 +114,9 @@ document
           window.location.href = '../../thanks.html';
         },
         error => {
-          window.alert('Error ! Please try to contact us via mail or phone.');
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = 'Submit Now';
+          window.alert('Error! Please try to contact us via mail or phone.');
         }
       );
   });
