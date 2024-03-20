@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homestays</title>
+    <meta
+      name="description"
+      content="Experience the authentic Kashmiri way of living with our homestays. Live in traditional Kashmiri homes, immerse yourself in local customs, and enjoy the warm hospitality of your hosts."
+    />
+
     <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../../index.css" />
     <link rel="stylesheet" href="../3-heritage-tours/style.css" />
@@ -224,20 +229,11 @@
       </div>
 
       <form
-        action="https://formsubmit.co/info@espreeholidays.com"
-        method="POST"
-        id="heritage-form"
-        class="enquiry-form p-4 d-none d-lg-block"
+        id="homestays-form-lg"
+        class="heritage-form enquiry-form p-4 d-none d-lg-block"
         autocomplete="on"
       >
         <h2 class="text-center pb-2">Check Availibility</h2>
-        <input
-          type="hidden"
-          name="_next"
-          value="https://espreeholidays.com/thanks.html"
-        />
-        <input type="hidden" name="_subject" value="Homestay Enquiry!" />
-        <input type="hidden" name="_captcha" value="false" />
         <div class="form-floating mb-2">
           <input
             type="text"
@@ -255,11 +251,11 @@
             type="email"
             name="Email"
             class="form-control"
-            id="floatingEmail${vehicle.id}"
+            id="floatingEmail"
             placeholder="Email"
             required
           />
-          <label for="floatingEmail${vehicle.id}">Email*</label>
+          <label for="floatingEmail">Email*</label>
         </div>
 
         <div class="form-floating mb-2">
@@ -282,18 +278,6 @@
             placeholder="Date of Arrival"
           />
           <label for="floatingStartDate">Date of Arrival</label>
-        </div>
-
-        <div class="form-floating mb-2">
-          <input
-            type="number"
-            min="1"
-            name="No. of Guests"
-            class="form-control"
-            id="floatingGuests"
-            placeholder="No. of Guests"
-          />
-          <label for="floatingGuests">No. of Guests*</label>
         </div>
 
         <div class="form-floating mb-2">
@@ -341,33 +325,20 @@
 
               <div class="booking-details"></div>
               <form
-                action="https://formsubmit.co/info@espreeholidays.com"
-                method="POST"
-                id="heritage-form"
-                class="enquiry-form"
+                id="homestays-form-sm"
+                class="heritage-form enquiry-form"
                 autocomplete="on"
               >
-                <input
-                  type="hidden"
-                  name="_next"
-                  value="https://espreeholidays.com/thanks.html"
-                />
-                <input
-                  type="hidden"
-                  name="_subject"
-                  value="Homestay Enquiry!"
-                />
-                <input type="hidden" name="_captcha" value="false" />
                 <div class="form-floating mb-2">
                   <input
                     type="text"
                     name="Full Name"
                     class="form-control"
-                    id="floatingFullName"
+                    id="floatingFullNameSm"
                     placeholder="Full Name"
                     required
                   />
-                  <label for="floatingFullName">Full Name*</label>
+                  <label for="floatingFullNameSm">Full Name*</label>
                 </div>
 
                 <div class="form-floating mb-2">
@@ -375,11 +346,11 @@
                     type="email"
                     name="Email"
                     class="form-control"
-                    id="floatingEmail${vehicle.id}"
+                    id="floatingEmailSm"
                     placeholder="Email"
                     required
                   />
-                  <label for="floatingEmail${vehicle.id}">Email*</label>
+                  <label for="floatingEmailSm">Email*</label>
                 </div>
 
                 <div class="form-floating mb-2">
@@ -387,23 +358,10 @@
                     type="tel"
                     name="Phone"
                     class="form-control"
-                    id="floatingPhone"
+                    id="floatingPhoneSm"
                     placeholder="Phone"
                   />
-                  <label for="floatingPhone">Phone (Optional)</label>
-                </div>
-
-                <div class="form-floating mb-2">
-                  <input
-                    type="number"
-                    min="1"
-                    name="No. of Guests"
-                    class="form-control"
-                    id="floatingGuests"
-                    placeholder="No. of Guests"
-                    required
-                  />
-                  <label for="floatingGuests">No. of Guests*</label>
+                  <label for="floatingPhoneSm">Phone (Optional)</label>
                 </div>
 
                 <div class="form-floating mb-2">
@@ -411,21 +369,21 @@
                     type="date"
                     name="Start Date"
                     class="form-control"
-                    id="floatingStartDate"
+                    id="floatingStartDateSm"
                     placeholder="Date of Arrival"
                   />
-                  <label for="floatingStartDate">Date of Arrival</label>
+                  <label for="floatingStartDateSm">Date of Arrival</label>
                 </div>
 
                 <div class="form-floating mb-2">
                   <textarea
                     class="form-control"
                     name="Message"
-                    id="floatingMessage"
+                    id="floatingMessageSm"
                     placeholder="Message"
                     style="height: 160px"
                   ></textarea>
-                  <label for="floatingMessage">Additional Instructions</label>
+                  <label for="floatingMessageSm">Message</label>
                 </div>
                 <button
                   type="submit"
@@ -517,6 +475,10 @@
     </footer>
 
     <script src="../../bootstrap/js/bootstrap.bundle.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
     <script src="./script.js"></script>
   </body>
 </html>

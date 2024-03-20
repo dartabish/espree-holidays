@@ -224,19 +224,10 @@
       <h1 class="section-title mb-0">Send Us A Message</h1>
       <article class="form-container">
         <form
-          action="https://formsubmit.co/info@espreeholidays.com"
-          method="POST"
           id="contact-form"
           class="p-4 d-flex flex-column"
           autocomplete="on"
         >
-          <input
-            type="hidden"
-            name="_next"
-            value="https://espreeholidays.com/thanks.html"
-          />
-          <input type="hidden" name="_subject" value="Contact Enquiry!" />
-          <input type="hidden" name="_captcha" value="false" />
           <div class="form-floating mb-2">
             <input
               type="text"
@@ -263,17 +254,6 @@
 
           <div class="form-floating mb-2">
             <input
-              type="tel"
-              name="Phone"
-              class="form-control"
-              id="floatingPhone"
-              placeholder="Phone"
-            />
-            <label for="floatingPhone">Phone (Optional)</label>
-          </div>
-
-          <div class="form-floating mb-2">
-            <input
               type="text"
               name="Subject"
               class="form-control"
@@ -282,6 +262,17 @@
               required
             />
             <label for="floatingSubject">Subject*</label>
+          </div>
+
+          <div class="form-floating mb-2">
+            <input
+              type="tel"
+              name="Phone"
+              class="form-control"
+              id="floatingPhone"
+              placeholder="Phone"
+            />
+            <label for="floatingPhone">Phone (Optional)</label>
           </div>
 
           <div class="form-floating mb-3">
@@ -376,6 +367,10 @@
     </footer>
 
     <script src="../../bootstrap/js/bootstrap.bundle.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
     <script src="./script.js"></script>
   </body>
 </html>

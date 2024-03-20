@@ -309,9 +309,16 @@ courses.forEach(course => {
 });
 
 // Event listener for form submissions
-/* packageCardsContainer.addEventListener('submit', function (event) {
+packageCardsContainer.addEventListener('submit', function (event) {
   if (event.target.classList.contains('enquiry-form')) {
     event.preventDefault();
+
+    // Extract form data
+    (function () {
+      emailjs.init({
+        publicKey: 'IWHJXL5_pOB5VYAl-',
+      });
+    })();
 
     // Extract form data
     let packageId = event.target.getAttribute('data-package-id');
@@ -319,24 +326,51 @@ courses.forEach(course => {
       selectedPackage: event.target.querySelector(
         `#floatingPackage${packageId}`
       ).value,
-      startDate: event.target.querySelector(`#floatingStartDate${packageId}`)
-        .value,
       fullName: event.target.querySelector(`#floatingFullName${packageId}`)
         .value,
+      email: event.target.querySelector(`#floatingEmail${packageId}`).value,
       phone: event.target.querySelector(`#floatingPhone${packageId}`).value,
+      startDate: event.target.querySelector(`#floatingStartDate${packageId}`)
+        .value,
       message: event.target.querySelector(`#floatingMessage${packageId}`).value,
     };
 
-    var email = 'info@espreeholidays.com';
-    var subject = 'course Package Enquiry';
-    var emailBody = `Hi, I'm interested in booking a course package!\nSelected Package: ${formData.selectedPackage}\nDate of Arrival: ${formData.startDate}\nFull Name: ${formData.fullName}\nPhone: ${formData.phone}\nAdditional Instructions: ${formData.message}`;
-    var email = `mailto:${email}?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(emailBody)}`;
-    window.open(email, '_blank').focus();
-    window.location.reload();
+    const { selectedPackage, fullName, email, phone, startDate, message } =
+      formData;
+    let transformedFormData = {
+      enquiryType: 'Skiing & Snowboarding Courses',
+      messageBody: `
+    Selected Course: ${selectedPackage}
+    <br>
+    <br>
+    Name : ${fullName}
+    <br>
+    <br>
+    Email: ${email}
+    <br>
+    <br>
+    Phone: ${phone}
+    <br>
+    <br>
+    Date of Arrival: ${startDate}
+    <br>
+    <br>
+    Message: ${message}
+    `,
+    };
+
+    emailjs
+      .send('service_hqpvsud', 'template_3jvbjoa', transformedFormData)
+      .then(
+        response => {
+          window.location.href = '../../thanks.html';
+        },
+        error => {
+          window.alert('Error ! Please try to contact us via mail or phone.');
+        }
+      );
   }
-}); */
+});
 
 const backToTopBtn = document.getElementById('myBtn');
 function scrollFunction() {

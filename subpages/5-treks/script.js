@@ -482,7 +482,7 @@ This location was previously only frequented by locals to get away from all the 
   },
   {
     id: 'soft-trek-4',
-    title: 'Dumb Galinishat',
+    title: 'Dumb Galinishat Trek',
     img: 'https://content3.jdmagicbox.com/comp/srinagar/y4/9999px194.x194.220327011233.l3y4/catalogue/zabarwan-range-trekking-area-nishat-srinagar-tourist-attraction-slhgz00w11.jpg',
     details: {
       totalDistance: '-',
@@ -537,20 +537,6 @@ document.addEventListener('DOMContentLoaded', function () {
       prevEl: '.trek-button-prev',
     },
   });
-
-  /* const treksSwiperWrapper = document.querySelector('.trek-swiper-wrapper');
-
-  trekSlides.forEach(slide => {
-    const slideDiv = document.createElement('div');
-    slideDiv.className = 'swiper-slide trek-slide';
-    slideDiv.innerHTML = `
-            <img
-              src="${slide.img}"
-              alt="img placeholder"
-            />
-    `;
-    treksSwiperWrapper.appendChild(slideDiv);
-  }); */
 });
 
 function displayTreks(object, container) {
@@ -693,17 +679,9 @@ function displayTreks(object, container) {
                     </div>
                     
                     <div class="booking-details"></div>
-                    <form action="https://formsubmit.co/info@espreeholidays.com"
-                method="POST" id="bookingForm${
-                  trek.id
-                }" class="booking-form" data-trek-id="${trek.id}">
-                <input type="hidden" name="_next" value="https://espreeholidays.com/thanks.html">
-                <input
-                  type="hidden"
-                  name="_subject"
-                  value="Trek Enquiry!"
-                />
-                <input type="hidden" name="_captcha" value="false" />
+                    <form id="bookingForm${
+                      trek.id
+                    }" class="booking-form" data-trek-id="${trek.id}">
               <div class="form-floating d-flex">
               <input
               readonly
@@ -752,6 +730,19 @@ function displayTreks(object, container) {
                  />
                   <label for="floatingPhone${trek.id}">Phone (Optional)</label>
                 </div>
+
+                <div class="form-floating mb-2 ">
+                              <input
+                                type="date"
+                                name="Start Date"
+                                class="form-control"
+                                id="floatingStartDate${trek.id}"
+                                placeholder="Date of Arrival" 
+                                />
+                              <label for="floatingStartDate${
+                                trek.id
+                              }">Date of Arrival</label>
+                          </div>
                  
                  <div class="form-floating mb-2">
                     <textarea
@@ -877,14 +868,7 @@ function displaySoftTreks(object, container) {
                     </div>
                     
                     <div class="booking-details"></div>
-                    <form action="https://formsubmit.co/info@espreeholidays.com"
-                method="POST" id="bookingForm${trek.id}" class="booking-form" data-trek-id="${trek.id}">
-                <input
-                  type="hidden"
-                  name="_subject"
-                  value="Trek Enquiry!"
-                />
-                <input type="hidden" name="_captcha" value="false" />
+                    <form id="bookingForm${trek.id}" class="booking-form" data-trek-id="${trek.id}">
               <div class="form-floating d-flex">
               <input
               readonly
@@ -933,6 +917,17 @@ function displaySoftTreks(object, container) {
                  />
                   <label for="floatingPhone${trek.id}">Phone (Optional)</label>
                 </div>
+
+                <div class="form-floating mb-2 ">
+                              <input
+                                type="date"
+                                name="Start Date"
+                                class="form-control"
+                                id="floatingStartDate${trek.id}"
+                                placeholder="Date of Arrival" 
+                                />
+                              <label for="floatingStartDate${trek.id}">Date of Arrival</label>
+                          </div>
                  
                  <div class="form-floating mb-2">
                     <textarea
@@ -957,32 +952,63 @@ function displaySoftTreks(object, container) {
   });
 }
 
-/* function handleFormSubmission(event) {
+(function () {
+  emailjs.init({
+    publicKey: 'IWHJXL5_pOB5VYAl-',
+  });
+})();
+
+function handleFormSubmission(event) {
   event.preventDefault();
   let trekId = event.target.getAttribute('data-trek-id');
 
   let formData = {
     trek: event.target.querySelector(`#floatingTrek${trekId}`).value,
+    email: event.target.querySelector(`#floatingEmail${trekId}`).value,
     fullName: event.target.querySelector(`#floatingFullName${trekId}`).value,
     phone: event.target.querySelector(`#floatingPhone${trekId}`).value,
+    startDate: event.target.querySelector(`#floatingStartDate${trekId}`).value,
     message: event.target.querySelector(`#floatingMessage${trekId}`).value,
   };
 
-  var email = 'info@espreeholidays.com';
-  var subject = 'Vehicle Rental Enquiry';
-  var emailBody = `Hi, I'm interested in your Trek packages!\nSelected Trek: ${formData.trek}\nFull Name: ${formData.fullName}\nPhone: ${formData.phone}\nMessage: ${formData.message}`;
-  var email = `mailto:${email}?subject=${encodeURIComponent(
-    subject
-  )}&body=${encodeURIComponent(emailBody)}`;
-  window.open(email, '_blank').focus();
+  const { trek, fullName, email, phone, startDate, message } = formData;
+  let transformedFormData = {
+    enquiryType: 'Treks',
+    messageBody: `
+    Selected Trek: ${trek}
+    <br>
+    <br>
+    Name : ${fullName}
+    <br>
+    <br>
+    Email: ${email}
+    <br>
+    <br>
+    Phone: ${phone}
+    <br>
+    <br>
+    Date of Arrival: ${startDate}
+    <br>
+    <br>
+    Message: ${message}
+    `,
+  };
+
+  emailjs.send('service_hqpvsud', 'template_3jvbjoa', transformedFormData).then(
+    response => {
+      window.location.href = '../../thanks.html';
+    },
+    error => {
+      window.alert('Error ! Please try to contact us via mail or phone.');
+    }
+  );
 }
 
 document.addEventListener('submit', event => {
   if (event.target.classList.contains('booking-form')) {
     handleFormSubmission(event);
   }
-  location.reload();
-}); */
+});
 
 const backToTopBtn = document.getElementById('myBtn');
 function scrollFunction() {

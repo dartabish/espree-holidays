@@ -20,21 +20,47 @@ window.onscroll = function () {
   scrollFunction();
 };
 
-/* contactForm = document.getElementById('contact-form');
+contactForm = document.getElementById('contact-form');
+
+(function () {
+  emailjs.init({
+    publicKey: 'IWHJXL5_pOB5VYAl-',
+  });
+})();
 
 contactForm.addEventListener('submit', function (e) {
   e.preventDefault();
-  var name = document.getElementById('floatingFullName').value;
-  var messageSubject = document.getElementById('floatingSubject').value;
-  var phone = document.getElementById('floatingPhone').value;
-  var message = document.getElementById('floatingMessage').value;
+  const name = document.getElementById('floatingFullName').value;
+  const email = document.getElementById('floatingEmail').value;
+  const messageSubject = document.getElementById('floatingSubject').value;
+  const phone = document.getElementById('floatingPhone').value;
+  const message = document.getElementById('floatingMessage').value;
 
-  console.log('Name:', name);
-  var email = 'info@espreeholidays.com';
-  var subject = 'Enquiry for Espree Holidays';
-  var emailBody = `Full Name: ${name}\nSubject: ${messageSubject}\nPhone: ${phone}\nAdditional Instructions: ${message}`;
-  var email = `mailto:${email}?subject=${encodeURIComponent(
-    subject
-  )}&body=${encodeURIComponent(emailBody)}`;
-  window.open(email, '_blank').focus();
-}); */
+  let transformedFormData = {
+    enquiryType: 'Contact',
+    messageBody: `
+    Name : ${name}
+    <br>
+    <br>
+    Email: ${email}
+    <br>
+    <br>
+    Subject: ${messageSubject}
+    <br>
+    <br>
+    Phone: ${phone}
+    <br>
+    <br>
+    Message: ${message}
+    `,
+  };
+
+  emailjs.send('service_hqpvsud', 'template_3jvbjoa', transformedFormData).then(
+    response => {
+      window.location.href = '../../thanks.html';
+    },
+    error => {
+      window.alert('Error ! Please try to contact us via mail or phone.');
+    }
+  );
+});

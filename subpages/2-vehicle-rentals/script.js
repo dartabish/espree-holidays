@@ -155,10 +155,7 @@ function displayVehicles(object, container) {
                 </div>
               <div class="booking-details">
               </div>
-              <form  action="https://formsubmit.co/info@espreeholidays.com" method="POST" id="bookingForm${vehicle.id}" class="booking-form" data-vehicle-id="${vehicle.id}"  method="POST">
-              <input type="hidden" name="_next" value="https://espreeholidays.com/thanks.html">
-              <input type="hidden" name="_subject" value="Vehicle Rentals Enquiry!">
-              <input type="hidden" name="_captcha" value="false">
+              <form id="bookingForm${vehicle.id}" class="booking-form" data-vehicle-id="${vehicle.id}">
               
               <div class="form-floating d-flex">
               <input
@@ -233,32 +230,61 @@ function displayVehicles(object, container) {
   });
 }
 
-/* function handleFormSubmission(event) {
+(function () {
+  emailjs.init({
+    publicKey: 'IWHJXL5_pOB5VYAl-',
+  });
+})();
+
+function handleFormSubmission(event) {
   event.preventDefault();
+
   let vehicleId = event.target.getAttribute('data-vehicle-id');
 
   let formData = {
     vehicle: event.target.querySelector(`#floatingVehicle${vehicleId}`).value,
+    email: event.target.querySelector(`#floatingEmail${vehicleId}`).value,
     fullName: event.target.querySelector(`#floatingFullName${vehicleId}`).value,
     phone: event.target.querySelector(`#floatingPhone${vehicleId}`).value,
     message: event.target.querySelector(`#floatingMessage${vehicleId}`).value,
   };
 
-  var email = 'info@espreeholidays.com';
-  var subject = 'Vehicle Rental Enquiry';
-  var emailBody = `Hi, I'm interested in renting a vehicle!\nSelected Vehicle: ${formData.vehicle}\nFull Name: ${formData.fullName}\nPhone: ${formData.phone}\nAdditional Instructions: ${formData.message}`;
-  var email = `mailto:${email}?subject=${encodeURIComponent(
-    subject
-  )}&body=${encodeURIComponent(emailBody)}`;
-  window.open(email, '_blank').focus();
-} */
+  const { vehicle, fullName, email, phone, message } = formData;
 
-/* document.addEventListener('submit', event => {
+  let transformedFormData = {
+    enquiryType: 'Vehicle Rentals',
+    messageBody: `
+    Selected Vehicle: ${vehicle}
+    <br>
+    <br>
+    Name : ${fullName}
+    <br>
+    <br>
+    Email: ${email}
+    <br>
+    <br>
+    Phone: ${phone}
+    <br>
+    <br>
+    Message: ${message}
+    `,
+  };
+
+  emailjs.send('service_hqpvsud', 'template_3jvbjoa', transformedFormData).then(
+    response => {
+      window.location.href = '../../thanks.html';
+    },
+    error => {
+      window.alert('Error ! Please try to submit the form again.');
+    }
+  );
+}
+
+document.addEventListener('submit', event => {
   if (event.target.classList.contains('booking-form')) {
     handleFormSubmission(event);
   }
-  location.reload();
-}); */
+});
 
 const backToTopBtn = document.getElementById('myBtn');
 function scrollFunction() {

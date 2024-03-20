@@ -158,33 +158,59 @@ function displayVehicles() {
 
 displayVehicles();
 
-/* function handleFormSubmission(event) {
+(function () {
+  emailjs.init({
+    publicKey: 'IWHJXL5_pOB5VYAl-',
+  });
+})();
+
+function handleFormSubmission(event) {
   event.preventDefault();
   let vehicleId = event.target.getAttribute('data-vehicle-id');
 
   let formData = {
     vehicle: event.target.querySelector(`#floatingVehicle${vehicleId}`).value,
+    email: event.target.querySelector(`#floatingEmail${vehicleId}`).value,
     fullName: event.target.querySelector(`#floatingFullName${vehicleId}`).value,
     phone: event.target.querySelector(`#floatingPhone${vehicleId}`).value,
     message: event.target.querySelector(`#floatingMessage${vehicleId}`).value,
   };
 
-  var email = 'info@espreeholidays.com';
-  var subject = 'Local Transport Enquiry';
-  var emailBody = `Hi, I'm interested in renting a vehicle!\nSelected Vehicle: ${formData.vehicle}\nFull Name: ${formData.fullName}\nPhone: ${formData.phone}\nAdditional Instructions: ${formData.message}`;
-  var email = `mailto:${email}?subject=${encodeURIComponent(
-    subject
-  )}&body=${encodeURIComponent(emailBody)}`;
-  window.open(email, '_blank').focus();
+  let transformedFormData = {
+    enquiryType: 'Local Transport Service',
+    messageBody: `
+    Selected Vehicle: ${formData.vehicle}
+    <br>
+    <br>
+    Name: ${formData.fullName}
+    <br>
+    <br>
+    Email: ${formData.email}
+    <br>
+    <br>
+    Phone: ${formData.phone}
+    <br>
+    <br>
+    Message: ${formData.message}
+    `,
+  };
+
+  emailjs.send('service_hqpvsud', 'template_3jvbjoa', transformedFormData).then(
+    response => {
+      window.location.href = '../../thanks.html';
+    },
+    error => {
+      window.alert('Error ! Please try to contact us via mail or phone.');
+    }
+  );
 }
 
 document.addEventListener('submit', event => {
   if (event.target.classList.contains('booking-form')) {
     handleFormSubmission(event);
   }
-  location.reload();
 });
- */
+
 const backToTopBtn = document.getElementById('myBtn');
 function scrollFunction() {
   if (

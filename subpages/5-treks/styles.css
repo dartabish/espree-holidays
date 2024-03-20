@@ -83,21 +83,6 @@
   font-size: 18px;
 }
 
-@media screen and (min-width: 768px) {
-  .trek-swiper {
-    border-radius: 10px;
-    width: 98%;
-  }
-
-  .trek-swiper-wrapper {
-    border-radius: 10px;
-  }
-
-  .trek-slide {
-    border-radius: 10px;
-  }
-}
-
 @media screen and (min-width: 1024px) {
   .treks-header-swiper {
     height: 65vh;

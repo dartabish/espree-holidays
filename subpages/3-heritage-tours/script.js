@@ -20,24 +20,82 @@ window.onscroll = function () {
   scrollFunction();
 };
 
-/* forms = document.querySelectorAll('.enquiry-form');
-forms.forEach(form => {
-  form.addEventListener('submit', function (e) {
+(function () {
+  emailjs.init({
+    publicKey: 'IWHJXL5_pOB5VYAl-',
+  });
+})();
+
+document
+  .getElementById('heritage-form-lg')
+  .addEventListener('submit', function (e) {
     e.preventDefault();
 
-    var name = document.getElementById('floatingFullName').value;
-    var startDate = document.getElementById('floatingStartDate').value;
-    var phone = document.getElementById('floatingPhone').value;
-    var message = document.getElementById('floatingMessage').value;
+    const name = document.getElementById('floatingFullName').value;
+    const email = document.getElementById('floatingEmail').value;
+    const startDate = document.getElementById('floatingStartDate').value;
+    const phone = document.getElementById('floatingPhone').value;
+    const message = document.getElementById('floatingMessage').value;
 
-    console.log('Name:', name);
-    var email = 'info@espreeholidays.com';
-    var subject = 'Vehicle Rental Enquiry';
-    var emailBody = `Hi, I'm interested in booking the Kashmir Heritage Tour!\nFull Name: ${name}\nDate of Arrival: ${startDate}\nPhone: ${phone}\nMessage: ${message}`;
-    var email = `mailto:${email}?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(emailBody)}`;
-    window.open(email, '_blank').focus();
+    let transformedFormData = {
+      enquiryType: 'Heritage Tours',
+      messageBody: `
+    Name : ${name}
+    <br>
+    <br>
+    Email: ${email}
+    <br>
+    <br>
+    Date of Arrival: ${startDate}
+    <br>
+    <br>
+    Phone: ${phone}
+    <br>
+    <br>
+    Message: ${message}
+    `,
+    };
+
+    emailjs
+      .send('service_hqpvsud', 'template_3jvbjoa', transformedFormData)
+      .then(
+        response => {
+          window.location.href = '../../thanks.html';
+        },
+        error => {
+          window.alert('Error ! Please try to contact us via mail or phone.');
+        }
+      );
   });
-});
- */
+
+document
+  .getElementById('heritage-form-sm')
+  .addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('floatingFullNameSm').value;
+    const email = document.getElementById('floatingEmailSm').value;
+    const startDate = document.getElementById('floatingStartDateSm').value;
+    const phone = document.getElementById('floatingPhoneSm').value;
+    const message = document.getElementById('floatingMessageSm').value;
+
+    let transformedFormData = {
+      enquiryType: 'Heritage Tours',
+      fullName: name,
+      email: email,
+      phone: phone,
+      startDate: startDate,
+      message: message,
+    };
+
+    emailjs
+      .send('service_69esjw8', 'template_897f1hw', transformedFormData)
+      .then(
+        response => {
+          window.location.href = 'http://127.0.0.1:5500/thanks.html';
+        },
+        error => {
+          window.alert('Error ! Please try to submit the form again.');
+        }
+      );
+  });
