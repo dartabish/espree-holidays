@@ -94,8 +94,8 @@
   background-color: var(--accent-color-light);
 }
 
-.form-floating > .form-control {
-  padding: 2rem 1rem;
+.form-floating > label {
+  padding: 1rem 1.25rem !important;
 }
 
 @media screen and (min-width: 768px) {
